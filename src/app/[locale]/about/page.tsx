@@ -12,12 +12,14 @@ const AboutCarousel = dynamic(
   }
 );
 import { MarqueeBanner } from "@/components/ui/marquee-banner";
-import { aboutMeData } from "@/data/about-me";
+import { useAboutMeData } from "@/data/about-me";
 
 export default function AboutPage() {
+  const aboutMeData = useAboutMeData();
+
   return (
     <div className="bg-background text-foreground">
-      <div className="pt-20">
+      <div className="">
         {/* About Section with Carousel */}
         <AboutCarousel {...aboutMeData} />
       </div>

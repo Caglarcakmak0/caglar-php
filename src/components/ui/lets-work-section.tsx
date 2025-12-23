@@ -4,8 +4,10 @@ import type React from "react";
 
 import { useState } from "react";
 import { ArrowUpRight, Calendar } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function LetsWorkTogether() {
+  const t = useTranslations("WorkTogether");
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -47,7 +49,7 @@ export function LetsWorkTogether() {
                 transitionDelay: "100ms",
               }}
             >
-              Perfect
+              {t("perfect")}
             </span>
             <h3
               className="text-3xl font-light tracking-tight text-foreground transition-all duration-500 sm:text-4xl"
@@ -57,7 +59,7 @@ export function LetsWorkTogether() {
                 transitionDelay: "200ms",
               }}
             >
-              Let&apos;s talk
+              {t("letsTalk")}
             </h3>
           </div>
 
@@ -118,7 +120,7 @@ export function LetsWorkTogether() {
                     : "var(--foreground)",
                 }}
               >
-                Book a call
+                {t("bookCall")}
               </span>
               <ArrowUpRight
                 className="size-4 transition-all duration-500 sm:size-5"
@@ -153,7 +155,7 @@ export function LetsWorkTogether() {
               transitionDelay: "450ms",
             }}
           >
-            15 min intro call
+            {t("introCall")}
           </span>
         </div>
 
@@ -170,7 +172,7 @@ export function LetsWorkTogether() {
             <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
           </span>
           <span className="text-sm font-medium tracking-widest uppercase text-muted-foreground">
-            Available for projects
+            {t("available")}
           </span>
         </div>
 
@@ -205,7 +207,7 @@ export function LetsWorkTogether() {
                         : "translateY(0)",
                   }}
                 >
-                  Let&apos;s work
+                  {t("letsWork")}
                 </span>
               </span>
               <span className="block overflow-hidden">
@@ -218,7 +220,9 @@ export function LetsWorkTogether() {
                         : "translateY(0)",
                   }}
                 >
-                  <span className="text-muted-foreground/60">together</span>
+                  <span className="text-muted-foreground/60">
+                    {t("together")}
+                  </span>
                 </span>
               </span>
             </h2>
@@ -302,11 +306,10 @@ export function LetsWorkTogether() {
           }}
         >
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-            Have a project in mind? I&apos;d love to hear about it. Let&apos;s
-            create something exceptional together.
+            {t("projectQuestion")} {t("description")}
           </p>
           <span className="text-xs tracking-widest uppercase text-muted-foreground/60">
-            hello@example.com
+            caglarcakmak@caglarcakmak.site
           </span>
         </div>
       </div>

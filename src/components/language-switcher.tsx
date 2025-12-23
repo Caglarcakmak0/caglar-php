@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/routing";
+import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 export function LanguageSwitcher() {
@@ -11,7 +11,9 @@ export function LanguageSwitcher() {
 
   function toggleLanguage() {
     const nextLocale = locale === "en" ? "tr" : "en";
-    router.replace(pathname, { locale: nextLocale });
+    // Remove current locale prefix and add the new one
+    const pathWithoutLocale = pathname.replace(/^\/(en|tr)/, "");
+    router.push(`/${nextLocale}${pathWithoutLocale}`);
   }
 
   return (

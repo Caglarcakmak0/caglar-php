@@ -15,6 +15,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 import { Lock, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface TechImpactCardProps {
   className?: string;
@@ -38,6 +39,8 @@ const TechImpactCard = ({
   className,
   websiteUrl = "caglarcakmak.site",
 }: TechImpactCardProps) => {
+  const t = useTranslations("TechStack");
+
   return (
     <div
       className={cn(
@@ -52,10 +55,10 @@ const TechImpactCard = ({
         {/* Header */}
         <div className="mb-4">
           <h3 className="bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 bg-clip-text text-xl font-bold text-transparent">
-            Passionate about cutting-edge
+            {t("passionate")}
           </h3>
           <h3 className="bg-gradient-to-r from-purple-500 to-violet-500 bg-clip-text text-xl font-bold text-transparent">
-            technologies
+            {t("technologies")}
           </h3>
         </div>
 
@@ -211,12 +214,11 @@ const TechImpactCard = ({
                     className={cn(
                       "text-base font-bold",
                       "bg-gradient-to-b from-neutral-800 to-neutral-500 bg-clip-text text-transparent",
-                      "dark:from-neutral-100 dark:to-neutral-500"
+                      "dark:from-neutral-100 dark:to-neutral-500",
+                      "whitespace-pre-line"
                     )}
                   >
-                    Websites that
-                    <br />
-                    <span className="text-indigo-500">Impact.</span>
+                    {t("websitesImpact")}
                   </h3>
                   <div className="mt-2 h-1 w-20 rounded-full bg-neutral-200 dark:bg-neutral-800" />
                   <div className="mt-1 h-1 w-12 mx-auto rounded-full bg-neutral-200 dark:bg-neutral-800" />
@@ -234,7 +236,7 @@ const TechImpactCard = ({
                       "dark:bg-white dark:text-black"
                     )}
                   >
-                    Start
+                    {t("start")}
                     <ArrowRight className="size-2.5" />
                   </Link>
                   <Link
@@ -246,7 +248,7 @@ const TechImpactCard = ({
                       "dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800"
                     )}
                   >
-                    Details
+                    {t("details")}
                   </Link>
                 </div>
               </div>

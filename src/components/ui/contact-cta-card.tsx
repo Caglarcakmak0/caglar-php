@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Copy, Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ContactCTACardProps {
   className?: string;
@@ -11,9 +12,10 @@ interface ContactCTACardProps {
 
 const ContactCTACard = ({
   className,
-  email = "hello@yourname.com",
+  email = "caglarcakmak@caglarcakmak.site",
 }: ContactCTACardProps) => {
   const [copied, setCopied] = useState(false);
+  const t = useTranslations("ContactCTA");
 
   const handleCopy = async () => {
     try {
@@ -37,9 +39,9 @@ const ContactCTACard = ({
     >
       {/* Header */}
       <h3 className="mb-6 text-left min-[1080px]:text-center text-xl font-medium text-slate-900 dark:text-white">
-        Let&apos;s work together
+        {t("title")}
         <br />
-        on your next project
+        {t("subtitle")}
       </h3>
 
       {/* Email Button */}
@@ -58,7 +60,7 @@ const ContactCTACard = ({
           <Copy className="h-4 w-4" />
         )}
         <span className="text-sm font-medium max-[1200px]:text-xs">
-          {email}
+          {copied ? t("emailCopied") : email}
         </span>
       </button>
     </div>

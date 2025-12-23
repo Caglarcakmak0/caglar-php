@@ -7,12 +7,15 @@
     "contact": "İletişim",
     "resume": "Özgeçmiş"
   },
+  "Metadata": {
+    "title": "Portfolyo - Full Stack Geliştirici",
+    "description": "Next.js & Modern Web Teknolojileri ile modern web deneyimleri inşa ediyorum"
+  },
   "Hero": {
     "badge": "Müsait",
     "badgeAction": "Yeni fırsatlara açığım!",
     "headlineRegular": "Fikirleri kusursuz ",
-    "headlineItalic": "dijital deneyimlere",
-    "headlineEnd": " dönüştürüyorum",
+    "headlineItalic": "dijital deneyimlere dönüştürüyorum",
     "greeting": "Merhaba, ben",
     "name": "Çağlar Çakmak",
     "role": "Full Stack Developer",
@@ -21,12 +24,33 @@
   "About": {
     "title": "Hakkımda",
     "profileTitle": "HAKKIMDA",
-    "profileDescription": "React, Vue, Node.js ve Odoo Framework'te 3+ yıl deneyimli Full Stack Developer",
+    "profileDescription": "React.js, Vue.js, Node.js ,Workcube ve Odoo Framework'te 3+ yıl deneyimli Full Stack Developer",
     "location": "UZAKTAN",
     "country": "İzmir, Türkiye"
   },
   "Testimonials": {
-    "title": "İnsanlar Ne Diyor"
+    "title": "İnsanlar Ne Diyor",
+    "quote1": "Since joining our team, Çağlar has stood out from the very first weeks with his curiosity, fast learning ability, and calm demeanor. He quickly grasps problems, asks the right questions, and strips away unnecessary complexity to present clear and focused solutions. What impressed me was not only his willingness to say 'I don’t know' and ask for help, but also how quickly he shared what he learned with the team and contributed to the project with enthusiasm.\n\nHe communicates strongly with product and design teams, clarifies expectations early, and makes potential risks visible. He takes ownership of the tasks he undertakes and delivers on them.\n\nIn a short time, he has moved far beyond the ‘junior’ label; today, he is a reliable developer the team can count on. Working with him is a pleasure, and his character is admirable. I wholeheartedly recommend him.",
+    "author1": "Emre BOSTAN",
+    "role1": "Kurucu Ortak & CTO",
+    "company1": "Pixa",
+    "date1": "18 Ağustos 2025",
+    "quote2": "I worked with Çağlar on frontend development projects where he demonstrated strong skills in JavaScript, TypeScript, React/Next.js, and Vue.js. Despite being early in his career, he consistently delivered quality code and took ownership of his tasks.\n\nÇağlar built responsive interfaces using Ant Design and TailwindCSS that helped improve our user engagement metrics. He adapted well between different frameworks and actively participated in code reviews, always eager to learn and implement feedback. His contributions to improving our development workflows showed great initiative for a junior developer.\n\nHaving studied with Çağlar at Ege University, I know him as a hard-working and dedicated person. He brings this same commitment to his professional work. His technical abilities combined with his positive attitude and willingness to learn made him a valuable team member.\n\nI recommend Çağlar for any frontend developer role. He's a motivated developer with solid skills across multiple frameworks who will continue to grow and contribute effectively to any team.",
+    "author2": "Ege Tuzun",
+    "role2": "Yazılım Mühendisi",
+    "company2": "dev.tools",
+    "date2": "29 Temmuz 2025",
+    "readMore": "Devamını Oku"
+  },
+  "Globe": {
+    "flexible": "Saat dilimi iletişimlerinde çok esneğim",
+    "UK": "İngiltere",
+    "India": "Hindistan",
+    "USA": "ABD"
+  },
+  "Status": {
+    "insideScoop": "İÇERİDEN BİLGİ",
+    "current": "Şu anda Odoo ERP modülleri & e-pin pazaryeri geliştiriyorum"
   },
   "Contact": {
     "title": "Birlikte Çalışalım",
@@ -44,5 +68,68 @@
     "quickLinks": "Hızlı Bağlantılar",
     "connect": "Bağlan",
     "rights": "Tüm hakları saklıdır."
+  },
+  "Skills": {
+    "accessible": "Erişilebilir",
+    "responsive": "Mobil Uyumlu",
+    "dynamic": "Dinamik",
+    "scalable": "Ölçeklenebilir",
+    "searchOptimized": "SEO Uyumlu",
+    "interactive": "Etkileşimli",
+    "secure": "Güvenli",
+    "reliable": "Güvenilir",
+    "engaging": "Etkileyici"
+  },
+  "ContactCTA": {
+    "title": "Birlikte çalışalım",
+    "subtitle": "bir sonraki projenizde",
+    "copyEmail": "E-posta kopyala",
+    "emailCopied": "E-posta kopyalandı!"
+  },
+  "WorkTogether": {
+    "perfect": "Mükemmel",
+    "letsTalk": "Konuşalım",
+    "bookCall": "Görüşme ayarla",
+    "introCall": "15 dk tanışma görüşmesi",
+    "available": "Projeler için müsait",
+    "letsWork": "Birlikte",
+    "together": "çalışalım",
+    "projectQuestion": "Aklınızda bir proje mi var?",
+    "description": "Detaylarını duymak isterim. Birlikte olağanüstü bir şey yaratalım."
+  },
+  "ProfileCard": {
+    "title": "İŞBİRLİĞİ",
+    "description": "Müşteri işbirliğine öncelik veriyor, açık iletişimi teşvik ediyorum"
+  },
+  "TechStack": {
+    "passionate": "En son teknolojiler",
+    "technologies": "hakkında tutkulu",
+    "websitesImpact": "Etki Yaratan Web Siteleri.",
+    "start": "Başla",
+    "details": "Detaylar"
+  },
+  "AboutMe": {
+    "subtitle": "HAKKIMDA DAHA FAZLASI",
+    "title": "Ben Çağlar, yaratıcı bir",
+    "titleHighlight": "Full-Stack Developer",
+    "description1": "Ben Çağlar Çakmak, dinamik web deneyimleri yaratma konusunda tutkulu, proaktif bir full-stack geliştiriciyim. Frontend'den backend'e, temiz ve verimli kodlarla karmaşık problemleri çözmeyi seviyorum. React, Next.js ve Node.js konusunda uzmanlığım var ve her zaman daha fazlasını öğrenmeye hevesliyim.",
+    "description2": "İşe dalmadığım zamanlarda, yeni fikirleri keşfediyor ve meraklı kalıyorum. Hayat denge ile ilgilidir ve her yanını kucaklamayı seviyorum.",
+    "quote": "Her gün bir fark yaratmaya hevesli uyanmaya inanıyorum!",
+    "iCode": "Kodlama",
+    "iExercise": "Spor",
+    "iRide": "Motosiklet"
+  },
+  "Timeline": {
+    "mainTitle": "Deneyimlerim",
+    "mainDescription": "Yıllar içerisindeki deneyimlerim",
+    "present": "Şu An",
+    "job1Title": "Yazılım Geliştiricisi @ Çetintaş Bilgi Teknolojileri",
+    "job1Description": "Türk mevzuatına uygun (e-Fatura, e-Arşiv) ölçeklenebilir Odoo ERP modülleri geliştiriyorum.",
+    "job2Title": "Frontend Geliştirici @ Pixa Software WMS",
+    "job2Description": "Vue 3 ve TypeScript kullanarak e-ticaret yönetim panellerini modernize ettim. 15 kişilik Agile ekibinde kod kalitesi girişimlerine destek verdim.",
+    "job3Title": "Freelance Frontend Geliştirici @ Pixa Software",
+    "job3Description": "Kurumsal web siteleri ve duyarlı e-posta şablonları için tasarım ve kodlama süreçlerini yönettim.",
+    "job4Title": "Kurucu Ortak ve Ekip Lideri @ Visioncore (Girişim)",
+    "job4Description": "Mercedes-Benz Yetkili Servisleri için otomatik araç takip sistemi geliştirdim. Güneş Paneli Kusur Tespiti için Bilgisayarlı Görü modeli eğittim. 12 geliştiriciden oluşan çapraz fonksiyonel ekibe liderlik ettim."
   }
 }

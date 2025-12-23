@@ -88,11 +88,11 @@ export const AboutCarousel = ({
   return (
     <section
       className={cn(
-        "w-full py-20 px-4 bg-gradient-to-b from-stone-100 to-white dark:from-stone-900 dark:to-background",
+        "w-full py-20 bg-gradient-to-b from-stone-100 to-white dark:from-transparent dark:to-transparent dark:bg-[#000000]",
         className
       )}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
           <div className="space-y-6">

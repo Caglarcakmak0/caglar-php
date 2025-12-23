@@ -21,7 +21,7 @@
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #000000;
   --foreground: #ededed;
   --muted: #262626;
   --muted-foreground: #a3a3a3;
@@ -146,41 +146,4 @@ h6 {
   }
 }
 
-/* Bento Grid - Responsive Layout for 1080px */
-.bento-grid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  grid-template-rows: auto !important;
-  gap: 1rem !important;
-}
 
-.bento-grid > * {
-  grid-area: auto !important;
-}
-
-@media (min-width: 1080px) {
-  .bento-grid {
-    grid-template-columns: repeat(12, 1fr) !important;
-    grid-template-rows: repeat(4, 1fr) !important;
-  }
-  
-  .bento-grid > .bento-profile {
-    grid-area: 1 / 1 / 2 / 9 !important;
-  }
-  
-  .bento-grid > .bento-tech {
-    grid-area: 1 / 9 / 3 / 13 !important;
-  }
-  
-  .bento-grid > .bento-globe {
-    grid-area: 2 / 1 / 4 / 6 !important;
-  }
-  
-  .bento-grid > .bento-contact {
-    grid-area: 2 / 6 / 3 / 9 !important;
-  }
-  
-  .bento-grid > .bento-status {
-    grid-area: 3 / 6 / 4 / 13 !important;
-  }
-}

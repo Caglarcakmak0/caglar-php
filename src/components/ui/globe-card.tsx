@@ -4,24 +4,27 @@ import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import createGlobe from "cobe";
 
+import { useTranslations } from "next-intl";
+
 interface GlobeCardProps {
   className?: string;
   location?: string;
   country?: string;
 }
 
-const timezones = [
-  { code: "GB", name: "UK", flag: "🇬🇧" },
-  { code: "IN", name: "India", flag: "🇮🇳" },
-  { code: "US", name: "USA", flag: "🇺🇸" },
-];
-
 const GlobeCard = ({
   className,
   location = "REMOTE",
   country = "Turkey",
 }: GlobeCardProps) => {
+  const t = useTranslations("Globe");
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  const timezones = [
+    { code: "GB", name: t("UK"), flag: "🇬🇧" },
+    { code: "IN", name: t("India"), flag: "🇮🇳" },
+    { code: "US", name: t("USA"), flag: "🇺🇸" },
+  ];
 
   useEffect(() => {
     let width = 0;
@@ -78,7 +81,7 @@ const GlobeCard = ({
       {/* Timezone Info - Top */}
       <div className="relative z-10 p-6 pb-0">
         <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
-          I&apos;m very flexible with time zone communications
+          {t("flexible")}
         </h3>
 
         <div className="flex gap-2 flex-wrap">

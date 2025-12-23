@@ -8,10 +8,10 @@ import { TechImpactCard } from "@/components/ui/tech-impact-card";
 import { ContactCTACard } from "@/components/ui/contact-cta-card";
 import { GlowingBentoCard } from "@/components/ui/glowing-bento-card";
 import { CurrentStatusCard } from "@/components/ui/skills-marquee";
-import { timelineData } from "@/data/timeline";
+import { useTimelineData } from "@/data/timeline";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
-import { aboutMeData } from "@/data/about-me";
+import { useAboutMeData } from "@/data/about-me";
 
 const AboutCarousel = dynamic(
   () =>
@@ -58,6 +58,8 @@ const LetsWorkTogether = dynamic(() =>
 
 export default function Home() {
   const t = useTranslations();
+  const aboutMeData = useAboutMeData();
+  const timelineData = useTimelineData();
 
   return (
     <div className="bg-background">
@@ -76,6 +78,7 @@ export default function Home() {
             greeting: t("Hero.greeting"),
             name: t("Hero.name"),
             role: t("Hero.role"),
+            image: "/ben.jpeg",
           }}
           cta={{
             text: t("Hero.cta"),
@@ -85,12 +88,12 @@ export default function Home() {
         />
         <HeroEnding />
       </div>
-   <div className="pt-20">
+      <div className="h-20 bg-black" aria-hidden="true" />
+      <div className="">
         {/* About Section with Carousel */}
         <AboutCarousel {...aboutMeData} />
       </div>
- 
- 
+
       {/* About - New Bento Grid */}
       <section id="about" className="max-w-7xl mx-auto px-4 py-20">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-foreground">
@@ -98,9 +101,9 @@ export default function Home() {
         </h2>
 
         {/* Glowing Bento Grid Layout */}
-        <ul className="bento-grid">
+        <ul className="grid grid-cols-1 gap-4 min-[1080px]:grid-cols-12 min-[1080px]:grid-rows-3">
           {/* Row 1: Profile + TechImpact (Combined) */}
-          <GlowingBentoCard className="bento-profile">
+          <GlowingBentoCard className="min-[1080px]:[grid-area:1/1/2/9]">
             <ProfileCard
               className="h-full"
               title={t("About.profileTitle")}
@@ -108,27 +111,27 @@ export default function Home() {
             />
           </GlowingBentoCard>
 
-          <GlowingBentoCard className="bento-tech">
+          <GlowingBentoCard className="min-[1080px]:[grid-area:1/9/3/13]">
             <TechImpactCard className="h-full" />
           </GlowingBentoCard>
 
           {/* Row 2: Contact */}
-          <GlowingBentoCard className="bento-contact">
+          <GlowingBentoCard className="min-[1080px]:[grid-area:2/6/3/9]">
             <ContactCTACard
               className="h-full"
               email="caglarcakmak0@icloud.com"
             />
           </GlowingBentoCard>
 
-          {/* Row 3-4: Globe (tall) + CurrentStatus + Skills */}
-          <GlowingBentoCard className="bento-globe">
+          {/* Row 2-3: Globe (tall) + CurrentStatus */}
+          <GlowingBentoCard className="min-[1080px]:[grid-area:2/1/4/6]">
             <GlobeCard
               className="h-full"
               location={t("About.location")}
               country={t("About.country")}
             />
           </GlowingBentoCard>
-          <GlowingBentoCard className="bento-status">
+          <GlowingBentoCard className="min-[1080px]:[grid-area:3/6/4/13]">
             <CurrentStatusCard className="h-full" />
           </GlowingBentoCard>
         </ul>

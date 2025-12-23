@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface MarqueeItem {
   text: string;
@@ -28,22 +29,33 @@ const Star = () => (
   </svg>
 );
 
-const defaultItems: MarqueeItem[] = [
-  { text: "Accessible" },
-  { text: "Responsive" },
-  { text: "Dynamic" },
-  { text: "Scalable" },
-  { text: "Search Optimized" },
-  { text: "Interactive" },
-  { text: "Secure" },
-  { text: "Reliable" },
-  { text: "Engaging" },
-];
-
 const MarqueeBanner = React.forwardRef<HTMLDivElement, MarqueeBannerProps>(
-  ({ className, items = defaultItems }, ref) => {
+  ({ className, items }, ref) => {
+    const t = useTranslations("Skills");
+
+    // Use translation keys for default items
+    const defaultItems: MarqueeItem[] = [
+      { text: t("accessible") },
+      { text: t("responsive") },
+      { text: t("dynamic") },
+      { text: t("scalable") },
+      { text: t("searchOptimized") },
+      { text: t("interactive") },
+      { text: t("secure") },
+      { text: t("reliable") },
+      { text: t("engaging") },
+    ];
+
+    // Use provided items or default translated items
+    const displayItems = items || defaultItems;
+
     // Duplicate items for seamless loop
-    const allItems = [...items, ...items, ...items, ...items];
+    const allItems = [
+      ...displayItems,
+      ...displayItems,
+      ...displayItems,
+      ...displayItems,
+    ];
 
     return (
       <div className={cn("relative scale-110", className)} ref={ref}>

@@ -7,25 +7,50 @@
     "contact": "Contact",
     "resume": "Resume"
   },
+  "Metadata": {
+    "title": "Portfolio - Full Stack Developer",
+    "description": "Building modern web experiences with Next.js & Modern Tech"
+  },
   "Hero": {
     "badge": "Available",
     "badgeAction": "Open to new opportunities!",
-    "headlineRegular": "I help founders turn ideas into seamless ",
+    "headlineRegular": "Turning ideas into flawless ",
     "headlineItalic": "digital experiences",
     "greeting": "Hello, I'm",
     "name": "Çağlar Çakmak",
-    "role": "a Full Stack Developer",
+    "role": "Full Stack Developer",
     "cta": "Let's Connect"
   },
   "About": {
     "title": "About Me",
     "profileTitle": "ABOUT ME",
-    "profileDescription": "Full Stack Developer with 3+ years experience in React, Vue, Node.js, and Odoo Framework",
+    "profileDescription": "Full Stack Developer with 3+ years experience in React.js, Vue.js, Node.js, Workcube and Odoo Framework",
     "location": "REMOTE",
     "country": "İzmir, Turkey"
   },
   "Testimonials": {
-    "title": "What People Say"
+    "title": "What People Say",
+    "quote1": "Since joining our team, Çağlar has stood out from the very first weeks with his curiosity, fast learning ability, and calm demeanor. He quickly grasps problems, asks the right questions, and strips away unnecessary complexity to present clear and focused solutions. What impressed me was not only his willingness to say 'I don’t know' and ask for help, but also how quickly he shared what he learned with the team and contributed to the project with enthusiasm.\n\nHe communicates strongly with product and design teams, clarifies expectations early, and makes potential risks visible. He takes ownership of the tasks he undertakes and delivers on them.\n\nIn a short time, he has moved far beyond the ‘junior’ label; today, he is a reliable developer the team can count on. Working with him is a pleasure, and his character is admirable. I wholeheartedly recommend him.",
+    "author1": "Emre BOSTAN",
+    "role1": "Co-Founder & CTO",
+    "company1": "Pixa",
+    "date1": "August 18, 2025",
+    "quote2": "I worked with Çağlar on frontend development projects where he demonstrated strong skills in JavaScript, TypeScript, React/Next.js, and Vue.js. Despite being early in his career, he consistently delivered quality code and took ownership of his tasks.\n\nÇağlar built responsive interfaces using Ant Design and TailwindCSS that helped improve our user engagement metrics. He adapted well between different frameworks and actively participated in code reviews, always eager to learn and implement feedback. His contributions to improving our development workflows showed great initiative for a junior developer.\n\nHaving studied with Çağlar at Ege University, I know him as a hard-working and dedicated person. He brings this same commitment to his professional work. His technical abilities combined with his positive attitude and willingness to learn made him a valuable team member.\n\nI recommend Çağlar for any frontend developer role. He's a motivated developer with solid skills across multiple frameworks who will continue to grow and contribute effectively to any team.",
+    "author2": "Ege Tuzun",
+    "role2": "Software Engineer",
+    "company2": "dev.tools",
+    "date2": "July 29, 2025",
+    "readMore": "Read More"
+  },
+  "Globe": {
+    "flexible": "I'm very flexible with time zone communications",
+    "UK": "UK",
+    "India": "India",
+    "USA": "USA"
+  },
+  "Status": {
+    "insideScoop": "THE INSIDE SCOOP",
+    "current": "Currently building Odoo ERP modules & e-pin marketplace"
   },
   "Contact": {
     "title": "Let's Work Together",
@@ -43,5 +68,68 @@
     "quickLinks": "Quick Links",
     "connect": "Connect",
     "rights": "All rights reserved."
+  },
+  "Skills": {
+    "accessible": "Accessible",
+    "responsive": "Responsive",
+    "dynamic": "Dynamic",
+    "scalable": "Scalable",
+    "searchOptimized": "Search Optimized",
+    "interactive": "Interactive",
+    "secure": "Secure",
+    "reliable": "Reliable",
+    "engaging": "Engaging"
+  },
+  "ContactCTA": {
+    "title": "Let's work together",
+    "subtitle": "on your next project",
+    "copyEmail": "Copy email",
+    "emailCopied": "Email copied!"
+  },
+  "WorkTogether": {
+    "perfect": "Perfect",
+    "letsTalk": "Let's talk",
+    "bookCall": "Book a call",
+    "introCall": "15 min intro call",
+    "available": "Available for projects",
+    "letsWork": "Let's work",
+    "together": "together",
+    "projectQuestion": "Have a project in mind?",
+    "description": "I'd love to hear about it. Let's create something exceptional together."
+  },
+  "ProfileCard": {
+    "title": "COLLABORATION",
+    "description": "I prioritize client collaboration, fostering open communication"
+  },
+  "TechStack": {
+    "passionate": "Passionate about cutting-edge",
+    "technologies": "technologies",
+    "websitesImpact": "Websites that Impact.",
+    "start": "Start",
+    "details": "Details"
+  },
+  "AboutMe": {
+    "subtitle": "MORE ABOUT ME",
+    "title": "I'm Çağlar, a creative",
+    "titleHighlight": "Full-Stack Developer and a little bit of everything",
+    "description1": "I'm Çağlar Çakmak, a proactive full-stack developer passionate about creating dynamic web experiences. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans React, Next.js, and Node.js, and I'm always eager to learn more.",
+    "description2": "When I'm not immersed in work, I'm exploring new ideas and staying curious. Life's about balance, and I love embracing every part of it.",
+    "quote": "I believe in waking up each day eager to make a difference!",
+    "iCode": "I Code",
+    "iExercise": "I Exercise",
+    "iRide": "I Ride"
+  },
+  "Timeline": {
+    "mainTitle": "Experience",
+    "mainDescription": "My professional journey over the years",
+    "present": "Present",
+    "job1Title": "Software Developer @ Çetintaş Bilgi Teknolojileri",
+    "job1Description": "Developing scalable Odoo ERP modules compliant with Turkish legislation (e-Invoice, e-Archive).",
+    "job2Title": "Frontend Developer @ Pixa Software WMS",
+    "job2Description": "Modernized e-commerce management panels using Vue 3 and TypeScript. Led code quality initiatives within a 15-person Agile team.",
+    "job3Title": "Freelance Frontend Developer @ Pixa Software",
+    "job3Description": "Managed design and coding processes for corporate websites and responsive email templates.",
+    "job4Title": "Co-Founder & Team Lead @ Visioncore (Startup)",
+    "job4Description": "Developed an automated vehicle tracking system for Mercedes-Benz Authorized Services. Trained a Computer Vision model for Solar Panel Defect Detection. Led a cross-functional team of 12 developers."
   }
 }

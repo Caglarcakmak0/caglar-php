@@ -3,48 +3,43 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const testimonials = [
-  {
-    id: 1,
-    quote:
-      "The attention to detail and creative vision transformed our brand identity completely.",
-    author: "Sarah Chen",
-    role: "Creative Director",
-    company: "Studio Forma",
-    image:
-      "https://plus.unsplash.com/premium_photo-1689551671548-79ff30459d2a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF2YXRhcnN8ZW58MHx8MHx8fDA%3D$0",
-  },
-  {
-    id: 2,
-    quote:
-      "Working with them felt like a true creative partnership from day one.",
-    author: "Marcus Webb",
-    role: "Head of Design",
-    company: "Minimal Co",
-    image:
-      "https://images.unsplash.com/photo-1649123245135-4db6ead931b5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGF2YXRhcnN8ZW58MHx8MHx8fDA%3D$0",
-  },
-  {
-    id: 3,
-    quote: "They understand that great design is invisible yet unforgettable.",
-    author: "Elena Voss",
-    role: "Art Director",
-    company: "Pixel & Co",
-    image:
-      "https://images.unsplash.com/photo-1701615004837-40d8573b6652?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGF2YXRhcnN8ZW58MHx8MHx8fDA%3D$0",
-  },
-];
+const TestimonialsEditorial = () => {
+  const t = useTranslations("Testimonials");
 
-export default function TestimonialsEditorial() {
+  const testimonials = [
+    {
+      id: 1,
+      quote: t("quote1"),
+      author: t("author1"),
+      role: t("role1"),
+      company: t("company1"),
+      date: t("date1"),
+      image: "/emrebost.jpg",
+    },
+    {
+      id: 2,
+      quote: t("quote2"),
+      author: t("author2"),
+      role: t("role2"),
+      company: t("company2"),
+      date: t("date2"),
+      image: "/egetuzn.jpg",
+    },
+  ];
+
   const [active, setActive] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleChange = (index: number) => {
     if (index === active || isTransitioning) return;
     setIsTransitioning(true);
     setTimeout(() => {
       setActive(index);
+      setIsExpanded(false);
       setTimeout(() => setIsTransitioning(false), 50);
     }, 300);
   };
@@ -72,21 +67,45 @@ export default function TestimonialsEditorial() {
           {String(active + 1).padStart(2, "0")}
         </span>
 
-        <div className="flex-1 pt-6">
-          {/* Quote */}
-          <blockquote
-            className={`text-2xl md:text-3xl font-light leading-relaxed text-foreground tracking-tight transition-all duration-300 ${
-              isTransitioning
-                ? "opacity-0 translate-x-4"
-                : "opacity-100 translate-x-0"
-            }`}
-          >
-            {current.quote}
-          </blockquote>
+        <div className="flex-1 pt-6 text-foreground">
+          {/* Quote Container */}
+          <div className="relative">
+            <div
+              className={`relative transition-all duration-300 ${
+                isTransitioning
+                  ? "opacity-0 translate-x-4"
+                  : "opacity-100 translate-x-0"
+              }`}
+            >
+              <div
+                className={`transition-all duration-500 ease-in-out ${
+                  isExpanded
+                    ? "max-h-[200px] overflow-y-auto pr-2 custom-scrollbar"
+                    : "max-h-[140px] overflow-hidden"
+                }`}
+              >
+                <blockquote className="text-xl md:text-2xl font-light leading-relaxed tracking-tight whitespace-pre-line pb-2">
+                  {current.quote}
+                </blockquote>
+              </div>
+
+              {/* Gradient Overlay & Read More Button */}
+              {!isExpanded && (
+                <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background via-background/80 to-transparent flex items-end justify-end pb-0 pr-4">
+                  <button
+                    onClick={() => setIsExpanded(true)}
+                    className="text-sm font-medium text-primary hover:text-primary/80 transition-colors bg-background/50 backdrop-blur-sm px-4 py-1 rounded-full border border-border/50"
+                  >
+                    {t("readMore")}
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
 
           {/* Author info with hover reveal */}
           <div
-            className={`mt-10 group cursor-default transition-all duration-300 delay-100 ${
+            className={`mt-6 group cursor-default transition-all duration-300 delay-100 ${
               isTransitioning ? "opacity-0" : "opacity-100"
             }`}
           >
@@ -107,6 +126,9 @@ export default function TestimonialsEditorial() {
                   <span className="group-hover:text-foreground transition-colors duration-300">
                     {current.company}
                   </span>
+                </p>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  {current.date}
                 </p>
               </div>
             </div>
@@ -157,4 +179,6 @@ export default function TestimonialsEditorial() {
       </div>
     </div>
   );
-}
+};
+
+export default TestimonialsEditorial;

@@ -71,7 +71,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         {...props}
       >
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 via-purple-100/30 to-pink-100/50 dark:from-blue-950/50 dark:via-purple-950/30 dark:to-pink-950/50" />
+        <div className="absolute inset-0 bg-transparent" />
 
         {/* Shooting Stars */}
         <ShootingStars

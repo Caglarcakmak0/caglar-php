@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface ProfileCardProps {
   className?: string;
@@ -12,7 +13,7 @@ interface ProfileCardProps {
 const CollabGridSVG = () => (
   <svg
     className="-translate-x-1/2 absolute top-0 left-1/2 [mask-image:linear-gradient(to_right,transparent,black_20%,black_90%,transparent)]"
-    height="250"
+    height="300"
     viewBox="0 0 637 250"
     width="704"
   >
@@ -39,8 +40,20 @@ const CollabGridSVG = () => (
         fillOpacity="0.2"
         mask="url(#path-2-inside-1_170_308)"
       />
+      <image
+        href="/ben.jpeg"
+        x="268.5"
+        y="45"
+        width="100"
+        height="100"
+        clipPath="url(#avatar_clip)"
+        preserveAspectRatio="xMidYMid slice"
+      />
     </g>
     <defs>
+      <clipPath id="avatar_clip">
+        <circle cx="318.5" cy="95" r="50" />
+      </clipPath>
       <filter
         colorInterpolationFilters="sRGB"
         filterUnits="userSpaceOnUse"
@@ -88,11 +101,9 @@ const CollabGridSVG = () => (
   </svg>
 );
 
-const ProfileCard = ({
-  className,
-  title = "COLLABORATION",
-  description = "I prioritize client collaboration, fostering open communication",
-}: ProfileCardProps) => {
+const ProfileCard = ({ className, title, description }: ProfileCardProps) => {
+  const t = useTranslations("ProfileCard");
+
   return (
     <div
       className={cn(
@@ -102,7 +113,7 @@ const ProfileCard = ({
       )}
     >
       {/* CollabGrid SVG Background */}
-      <div className="relative h-[120px] w-full overflow-hidden">
+      <div className="relative h-[180px] w-full overflow-hidden">
         <CollabGridSVG />
       </div>
 
@@ -126,10 +137,10 @@ const ProfileCard = ({
         </div>
 
         <p className="mb-1 text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
-          {title}
+          {title || t("title")}
         </p>
         <p className="text-lg font-medium text-slate-900 dark:text-white">
-          {description}
+          {description || t("description")}
         </p>
       </div>
     </div>

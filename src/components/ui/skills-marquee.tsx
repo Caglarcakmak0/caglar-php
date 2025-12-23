@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface SkillsMarqueeProps {
   className?: string;
@@ -51,6 +52,7 @@ const SkillsMarquee = ({ className }: SkillsMarqueeProps) => {
 
 // Combined Card: CurrentStatus + SkillsMarquee
 const CurrentStatusCard = ({ className }: { className?: string }) => {
+  const t = useTranslations("Status");
   return (
     <div
       className={cn(
@@ -112,10 +114,10 @@ const CurrentStatusCard = ({ className }: { className?: string }) => {
           </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
-              THE INSIDE SCOOP
+              {t("insideScoop")}
             </p>
             <p className="text-xl font-semibold text-slate-900 dark:text-white">
-              Currently building Odoo ERP modules & e-pin marketplace
+              {t("current")}
             </p>
           </div>
         </div>
