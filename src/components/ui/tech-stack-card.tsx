@@ -23,12 +23,12 @@ const techStack = [
   { name: "React", icon: SiReact, color: "#61DAFB" },
   { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
   { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-  { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+  { name: "PostgreSQL", icon: SiMongodb, color: "#336791" },
+  { name: "Python", icon: SiPrisma, color: "#3776AB" },
   { name: "Git", icon: SiGit, color: "#F05032" },
   { name: "GitHub", icon: SiGithub, color: "#181717" },
   { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "Vue.js", icon: SiDocker, color: "#4FC08D" },
 ];
 
 const TechStackCard = ({ className }: TechStackCardProps) => {

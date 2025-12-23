@@ -1,0 +1,47 @@
+{
+  "Nav": {
+    "about": "About",
+    "blog": "Blog",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "Hero": {
+    "badge": "Available",
+    "badgeAction": "Open to new opportunities!",
+    "headlineRegular": "I help founders turn ideas into seamless ",
+    "headlineItalic": "digital experiences",
+    "greeting": "Hello, I'm",
+    "name": "Çağlar Çakmak",
+    "role": "a Full Stack Developer",
+    "cta": "Let's Connect"
+  },
+  "About": {
+    "title": "About Me",
+    "profileTitle": "ABOUT ME",
+    "profileDescription": "Full Stack Developer with 3+ years experience in React, Vue, Node.js, and Odoo Framework",
+    "location": "REMOTE",
+    "country": "İzmir, Turkey"
+  },
+  "Testimonials": {
+    "title": "What People Say"
+  },
+  "Contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind?",
+    "cta": "Get in Touch"
+  },
+  "Blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts, tutorials, and insights",
+    "readMore": "Read More",
+    "backToBlog": "Back to Blog",
+    "readTime": "min read"
+  },
+  "Footer": {
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "rights": "All rights reserved."
+  }
+}

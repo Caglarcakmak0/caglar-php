@@ -1,18 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-import dynamic from "next/dynamic";
-
-// Dynamic import to avoid SSR issues with Three.js
-const Globe = dynamic(() => import("react-globe.gl"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-full w-full items-center justify-center">
-      <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-500 border-t-transparent" />
-    </div>
-  ),
-});
+import createGlobe from "cobe";
 
 interface GlobeCardProps {
   className?: string;
@@ -20,93 +10,108 @@ interface GlobeCardProps {
   country?: string;
 }
 
+const timezones = [
+  { code: "GB", name: "UK", flag: "🇬🇧" },
+  { code: "IN", name: "India", flag: "🇮🇳" },
+  { code: "US", name: "USA", flag: "🇺🇸" },
+];
+
 const GlobeCard = ({
   className,
   location = "REMOTE",
   country = "Turkey",
 }: GlobeCardProps) => {
-  const globeRef = useRef<any>(null);
-  const [isClient, setIsClient] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    let width = 0;
+    const onResize = () =>
+      canvasRef.current && (width = canvasRef.current.offsetWidth);
+    window.addEventListener("resize", onResize);
+    onResize();
 
-  useEffect(() => {
-    if (globeRef.current) {
-      // Auto-rotate the globe
-      globeRef.current.controls().autoRotate = true;
-      globeRef.current.controls().autoRotateSpeed = 0.5;
-      globeRef.current.controls().enableZoom = false;
+    const globe = createGlobe(canvasRef.current!, {
+      devicePixelRatio: 2,
+      width: width * 2,
+      height: width * 2,
+      phi: 4.5,
+      theta: 0.3,
+      dark: 1,
+      diffuse: 1.2,
+      mapSamples: 16000,
+      mapBrightness: 6,
+      baseColor: [0.3, 0.3, 0.3],
+      markerColor: [0, 1, 1],
+      glowColor: [0.2, 0.5, 1.0],
+      markers: [
+        { location: [38.4237, 27.1428], size: 0.05 }, // İzmir, Turkey
+      ],
+      onRender: (state) => {
+        // Static globe - no rotation
+        state.width = width * 2;
+        state.height = width * 2;
+      },
+    });
 
-      // Set initial camera position for global view
-      globeRef.current.pointOfView({ lat: 20, lng: 0, altitude: 2.5 });
-    }
-  }, [isClient]);
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+      }
+    });
 
-  // Generate hexagonal pattern for all land areas
-  const [hexData, setHexData] = useState<any[]>([]);
-
-  useEffect(() => {
-    // Fetch land topology data
-    fetch("//unpkg.com/world-atlas/land-110m.json")
-      .then((res) => res.json())
-      .then((landTopo) => {
-        // Generate hex bins for land areas
-        const hexBins: any[] = [];
-
-        // Create a grid of hexagons across the globe
-        for (let lat = -90; lat <= 90; lat += 5) {
-          for (let lng = -180; lng <= 180; lng += 5) {
-            hexBins.push({
-              lat,
-              lng,
-              color: "#ffffff",
-              altitude: 0.01,
-            });
-          }
-        }
-
-        setHexData(hexBins);
-      })
-      .catch((err) => console.error("Error loading land data:", err));
+    return () => {
+      globe.destroy();
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   return (
     <div
       className={cn(
-        "group relative flex flex-col justify-between overflow-hidden rounded-2xl",
-        "bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-950",
+        "group relative flex flex-col overflow-hidden rounded-2xl",
+        "bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800",
         "border border-slate-200/50 dark:border-slate-700/50",
-        "min-h-[300px]",
+        "min-h-[500px] min-[1080px]:min-h-[300px]",
         className
       )}
     >
-      {/* Globe Container */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-90">
-        {isClient && (
-          <Globe
-            ref={globeRef}
-            width={350}
-            height={350}
-            backgroundColor="rgba(0,0,0,0)"
-            globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-            bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-            atmosphereColor="#3b82f6"
-            atmosphereAltitude={0.15}
-            pointsData={pointsData}
-            pointColor="color"
-            pointAltitude={0.02}
-            pointRadius="size"
-            pointsMerge={false}
-          />
-        )}
+      {/* Timezone Info - Top */}
+      <div className="relative z-10 p-6 pb-0">
+        <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
+          I&apos;m very flexible with time zone communications
+        </h3>
+
+        <div className="flex gap-2 flex-wrap">
+          {timezones.map((tz) => (
+            <div
+              key={tz.code}
+              className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium bg-white/80 text-slate-600 dark:bg-slate-800 dark:text-slate-300"
+            >
+              <span>{tz.flag}</span>
+              <span>{tz.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Gradient overlay for depth */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-100 via-transparent to-transparent dark:from-slate-950" />
+      {/* Globe Container - Center */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none translate-y-12">
+        <canvas
+          ref={canvasRef}
+          style={{
+            width: "100%",
+            height: "100%",
+            maxWidth: "100%",
+            aspectRatio: 1,
+          }}
+          className="w-full h-full opacity-0 transition-opacity duration-1000"
+        />
+      </div>
 
-      {/* Location Info */}
+      {/* Gradient overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-blue-50 via-transparent to-transparent dark:from-slate-900" />
+
+      {/* Location Info - Bottom */}
       <div className="relative z-10 mt-auto p-6">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200/80 dark:bg-slate-800/80">

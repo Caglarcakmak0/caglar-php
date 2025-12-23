@@ -1,14 +1,15 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { MenuToggleIcon } from "@/components/ui/menu-toggle-icon";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import { Link } from "@/i18n/routing";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -116,10 +117,10 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
+        <Link
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300 cursor-pointer"
           key={`link-${idx}`}
           href={item.link}
         >
@@ -130,7 +131,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             />
           )}
           <span className="relative z-20">{item.name}</span>
-        </a>
+        </Link>
       ))}
     </motion.div>
   );
@@ -213,10 +214,13 @@ export const MobileNavToggle = ({
   isOpen: boolean;
   onClick: () => void;
 }) => {
-  return isOpen ? (
-    <IconX className="text-black dark:text-white" onClick={onClick} />
-  ) : (
-    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+  return (
+    <button onClick={onClick} className="p-1">
+      <MenuToggleIcon
+        open={isOpen}
+        className="text-black dark:text-white size-8"
+      />
+    </button>
   );
 };
 

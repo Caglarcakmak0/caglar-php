@@ -28,7 +28,7 @@ const ContactCTACard = ({
   return (
     <div
       className={cn(
-        "group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl",
+        "group relative flex flex-col items-start min-[1080px]:items-center justify-center overflow-hidden rounded-2xl",
         "bg-white dark:bg-slate-900",
         "border border-slate-200/50 dark:border-slate-700/50",
         "p-6",
@@ -36,7 +36,7 @@ const ContactCTACard = ({
       )}
     >
       {/* Header */}
-      <h3 className="mb-6 text-center text-xl font-medium text-slate-900 dark:text-white">
+      <h3 className="mb-6 text-left min-[1080px]:text-center text-xl font-medium text-slate-900 dark:text-white">
         Let&apos;s work together
         <br />
         on your next project
@@ -57,7 +57,9 @@ const ContactCTACard = ({
         ) : (
           <Copy className="h-4 w-4" />
         )}
-        <span className="text-sm font-medium">{email}</span>
+        <span className="text-sm font-medium max-[1200px]:text-xs">
+          {email}
+        </span>
       </button>
     </div>
   );

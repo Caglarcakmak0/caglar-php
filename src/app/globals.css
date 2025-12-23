@@ -1,6 +1,26 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a3a3a3;
+  --primary: #171717;
+  --primary-foreground: #fafafa;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #171717;
+  --accent: #f5f5f5;
+  --accent-foreground: #171717;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+}
+
+.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
   --muted: #262626;
@@ -38,34 +58,20 @@
   --font-serif: var(--font-instrument-serif);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #0a0a0a;
-    --muted: #f5f5f5;
-    --muted-foreground: #737373;
-    --border: #e5e5e5;
-    --input: #e5e5e5;
-    --ring: #a3a3a3;
-    --primary: #171717;
-    --primary-foreground: #fafafa;
-    --secondary: #f5f5f5;
-    --secondary-foreground: #171717;
-    --accent: #f5f5f5;
-    --accent-foreground: #171717;
-    --destructive: #ef4444;
-    --destructive-foreground: #fafafa;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 /* Headings use Instrument Serif */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-instrument-serif), Georgia, serif;
 }
 
@@ -131,7 +137,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Gradient animation for hero ending */
 @keyframes gradient {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -139,4 +146,41 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Bento Grid - Responsive Layout for 1080px */
+.bento-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: auto !important;
+  gap: 1rem !important;
+}
 
+.bento-grid > * {
+  grid-area: auto !important;
+}
+
+@media (min-width: 1080px) {
+  .bento-grid {
+    grid-template-columns: repeat(12, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+  }
+  
+  .bento-grid > .bento-profile {
+    grid-area: 1 / 1 / 2 / 9 !important;
+  }
+  
+  .bento-grid > .bento-tech {
+    grid-area: 1 / 9 / 3 / 13 !important;
+  }
+  
+  .bento-grid > .bento-globe {
+    grid-area: 2 / 1 / 4 / 6 !important;
+  }
+  
+  .bento-grid > .bento-contact {
+    grid-area: 2 / 6 / 3 / 9 !important;
+  }
+  
+  .bento-grid > .bento-status {
+    grid-area: 3 / 6 / 4 / 13 !important;
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "Nav": {
+    "about": "Hakkımda",
+    "blog": "Blog",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "contact": "İletişim",
+    "resume": "Özgeçmiş"
+  },
+  "Hero": {
+    "badge": "Müsait",
+    "badgeAction": "Yeni fırsatlara açığım!",
+    "headlineRegular": "Fikirleri kusursuz ",
+    "headlineItalic": "dijital deneyimlere",
+    "headlineEnd": " dönüştürüyorum",
+    "greeting": "Merhaba, ben",
+    "name": "Çağlar Çakmak",
+    "role": "Full Stack Developer",
+    "cta": "İletişime Geç"
+  },
+  "About": {
+    "title": "Hakkımda",
+    "profileTitle": "HAKKIMDA",
+    "profileDescription": "React, Vue, Node.js ve Odoo Framework'te 3+ yıl deneyimli Full Stack Developer",
+    "location": "UZAKTAN",
+    "country": "İzmir, Türkiye"
+  },
+  "Testimonials": {
+    "title": "İnsanlar Ne Diyor"
+  },
+  "Contact": {
+    "title": "Birlikte Çalışalım",
+    "subtitle": "Aklınızda bir proje mi var?",
+    "cta": "İletişime Geç"
+  },
+  "Blog": {
+    "title": "Blog",
+    "subtitle": "Düşünceler, öğreticiler ve içgörüler",
+    "readMore": "Devamını Oku",
+    "backToBlog": "Blog'a Dön",
+    "readTime": "dk okuma"
+  },
+  "Footer": {
+    "quickLinks": "Hızlı Bağlantılar",
+    "connect": "Bağlan",
+    "rights": "Tüm hakları saklıdır."
+  }
+}

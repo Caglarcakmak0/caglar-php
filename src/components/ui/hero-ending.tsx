@@ -2,7 +2,7 @@
 
 export function HeroEnding() {
   return (
-    <div className="absolute inset-x-0 bottom-0 h-56">
+    <div className="absolute inset-x-0 bottom-0 h-56 md:pt-20 ">
       <div aria-hidden="true" className="relative h-60 w-full z-19 mt-4">
         <div className="absolute bottom-0 left-1/2 z-0 -translate-x-1/2 transform h-[500px] w-[1200px] mask-[linear-gradient(to_right,transparent,black_30%,black_70%,transparent)]">
           {/* Animated gradient blur */}
