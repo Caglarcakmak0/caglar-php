@@ -62,7 +62,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   });
 
   return (
-    <motion.div className={cn("fixed inset-x-0 top-4 z-40 w-full", className)}>
+    <motion.div className={cn("fixed inset-x-0 top-4 z-50 w-full", className)}>
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(
@@ -95,7 +95,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
+        "relative z-[70] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className
       )}
@@ -130,7 +130,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
             />
           )}
-          <span className="relative z-20">{item.name}</span>
+          <span className="relative z-[80]">{item.name}</span>
         </Link>
       ))}
     </motion.div>

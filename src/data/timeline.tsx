@@ -17,11 +17,11 @@ export const useTimelineData = () => {
           </p>
           <div className="mb-6">
             <Image
-              src="/odoo.png"
-              alt="Odoo ERP Dashboard"
-              width={500}
-              height={300}
-              className="rounded-lg object-cover shadow-md border border-neutral-200 dark:border-neutral-800"
+              src="/odoo-logo.png"
+              alt="Odoo Logo"
+              width={200}
+              height={60}
+              className="object-contain mb-2"
             />
           </div>
           <div className="flex flex-wrap gap-2 mt-4">

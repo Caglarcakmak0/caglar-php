@@ -88,7 +88,7 @@ export default function Home() {
         />
         <HeroEnding />
       </div>
-      <div className="h-20 bg-black" aria-hidden="true" />
+      <div className="h-20 bg-background" aria-hidden="true" />
       <div className="">
         {/* About Section with Carousel */}
         <AboutCarousel {...aboutMeData} />

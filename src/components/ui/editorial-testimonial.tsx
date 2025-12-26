@@ -61,7 +61,7 @@ const TestimonialsEditorial = () => {
       {/* Large index number */}
       <div className="flex items-start gap-8">
         <span
-          className="text-[120px] font-light leading-none text-foreground/10 select-none transition-all duration-500"
+          className="text-[60px] md:text-[80px] lg:text-[120px] font-light leading-none text-foreground/10 select-none transition-all duration-500"
           style={{ fontFeatureSettings: '"tnum"' }}
         >
           {String(active + 1).padStart(2, "0")}

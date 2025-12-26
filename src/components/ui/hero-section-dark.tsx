@@ -58,10 +58,22 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
   ) => {
     const [copied, setCopied] = React.useState(false);
 
-    const copyEmail = () => {
-      navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+    const copyEmail = async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.error("Failed to copy email:", err);
+      }
+    };
+
+    const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const contactSection = document.querySelector(cta.href);
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     };
 
     return (
@@ -74,25 +86,27 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         <div className="absolute inset-0 bg-transparent" />
 
         {/* Shooting Stars */}
-        <ShootingStars
-          starColor="#9E00FF"
-          trailColor="#2EB9DF"
-          minSpeed={15}
-          maxSpeed={35}
-          minDelay={1000}
-          maxDelay={3000}
-        />
-        <ShootingStars
-          starColor="#FF0099"
-          trailColor="#FFB800"
-          minSpeed={10}
-          maxSpeed={25}
-          minDelay={2000}
-          maxDelay={4000}
-        />
+        <div className="absolute inset-0 z-0">
+          <ShootingStars
+            starColor="#9E00FF"
+            trailColor="#2EB9DF"
+            minSpeed={15}
+            maxSpeed={35}
+            minDelay={1000}
+            maxDelay={3000}
+          />
+          <ShootingStars
+            starColor="#FF0099"
+            trailColor="#FFB800"
+            minSpeed={10}
+            maxSpeed={25}
+            minDelay={2000}
+            maxDelay={4000}
+          />
+        </div>
 
         {/* Content */}
-        <section className="relative z-10 max-w-5xl mx-auto px-4 py-28 flex flex-col items-center justify-center min-h-screen">
+        <section className="relative z-20 max-w-5xl mx-auto px-4 py-28 flex flex-col items-center justify-center min-h-screen">
           {/* Badge */}
           <div className="flex items-center gap-2 mb-8">
             <span className="px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded-full">
@@ -138,7 +152,8 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             {/* CTA Button */}
             <a
               href={cta.href}
-              className="group flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium hover:scale-105 transition-transform duration-200"
+              onClick={handleContactClick}
+              className="group flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium hover:scale-105 transition-transform duration-200 relative z-30 cursor-pointer"
             >
               {cta.text}
               <span className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center group-hover:translate-x-1 transition-transform">

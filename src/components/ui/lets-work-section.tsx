@@ -3,7 +3,7 @@
 import type React from "react";
 
 import { useState } from "react";
-import { ArrowUpRight, Calendar } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function LetsWorkTogether() {
@@ -63,9 +63,9 @@ export function LetsWorkTogether() {
             </h3>
           </div>
 
-          {/* Book a call button */}
-          <button
-            onClick={handleBookCall}
+          {/* Send Email button */}
+          <a
+            href="mailto:caglarcakmak0@icloud.com"
             onMouseEnter={() => setIsButtonHovered(true)}
             onMouseLeave={() => setIsButtonHovered(false)}
             className="group relative flex items-center gap-4 transition-all duration-500 cursor-pointer"
@@ -103,7 +103,7 @@ export function LetsWorkTogether() {
                   : "none",
               }}
             >
-              <Calendar
+              <Mail
                 className="size-4 transition-all duration-500 sm:size-5"
                 strokeWidth={1.5}
                 style={{
@@ -144,7 +144,7 @@ export function LetsWorkTogether() {
                 opacity: isButtonHovered ? 0 : 0.5,
               }}
             />
-          </button>
+          </a>
 
           {/* Subtle subtext */}
           <span

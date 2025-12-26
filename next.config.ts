@@ -4,8 +4,11 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig: import("next").NextConfig = {
+  output: 'export',
+  trailingSlash: true,
   compress: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

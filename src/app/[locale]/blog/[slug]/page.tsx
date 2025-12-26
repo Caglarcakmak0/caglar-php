@@ -1,16 +1,26 @@
-"use client";
-
-import { useParams } from "next/navigation";
 import { getBlogPostBySlug } from "@/data/blog";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from "lucide-react";
 import Image from "next/image";
+import { getAllBlogSlugs } from "@/data/blog";
 
-export default function BlogPostPage() {
-  const t = useTranslations();
-  const params = useParams();
-  const slug = params.slug as string;
+export function generateStaticParams() {
+  const slugs = getAllBlogSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
+
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: string }>;
+}) {
+  const { slug, locale } = await params;
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale });
   const post = getBlogPostBySlug(slug);
 
   if (!post) {
