@@ -18,6 +18,13 @@
   --accent-foreground: #171717;
   --destructive: #ef4444;
   --destructive-foreground: #fafafa;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --folder-back: oklch(0.75 0.12 45);
+  --folder-front: oklch(0.8 0.14 50);
+  --folder-tab: oklch(0.7 0.1 40);
 }
 
 .dark {
@@ -36,6 +43,13 @@
   --accent-foreground: #fafafa;
   --destructive: #ef4444;
   --destructive-foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #ededed;
+  --popover: #171717;
+  --popover-foreground: #ededed;
+  --folder-back: oklch(0.65 0.12 45);
+  --folder-front: oklch(0.7 0.14 50);
+  --folder-tab: oklch(0.6 0.1 40);
 }
 
 @theme inline {
@@ -54,6 +68,13 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-folder-back: var(--folder-back);
+  --color-folder-front: var(--folder-front);
+  --color-folder-tab: var(--folder-tab);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-instrument-serif);
 }
@@ -149,5 +170,3 @@ h6 {
     background-position: 100% 50%;
   }
 }
-
-

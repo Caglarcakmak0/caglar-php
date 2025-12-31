@@ -35,7 +35,7 @@ export function SiteNavbar() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
+          <div className="relative z-[90] flex items-center gap-4">
             <ThemeToggle />
             <LanguageSwitcher />
           </div>

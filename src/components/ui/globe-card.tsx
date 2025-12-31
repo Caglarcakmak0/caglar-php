@@ -74,7 +74,7 @@ const GlobeCard = ({
         "group relative flex flex-col overflow-hidden rounded-2xl",
         "bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800",
         "border border-slate-200/50 dark:border-slate-700/50",
-        "min-h-[500px] min-[1080px]:min-h-[300px]",
+        "min-h-[400px] min-[1080px]:min-h-0",
         className
       )}
     >

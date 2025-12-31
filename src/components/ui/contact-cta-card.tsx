@@ -12,7 +12,7 @@ interface ContactCTACardProps {
 
 const ContactCTACard = ({
   className,
-  email = "caglarcakmak@caglarcakmak.site",
+  email = "caglarcakmak0@icloud.com",
 }: ContactCTACardProps) => {
   const [copied, setCopied] = useState(false);
   const t = useTranslations("ContactCTA");

@@ -123,13 +123,91 @@
     "mainTitle": "Experience",
     "mainDescription": "My professional journey over the years",
     "present": "Present",
-    "job1Title": "Software Developer @ Çetintaş Bilgi Teknolojileri",
-    "job1Description": "Developing scalable Odoo ERP modules compliant with Turkish legislation (e-Invoice, e-Archive).",
-    "job2Title": "Frontend Developer @ Pixa Software WMS",
-    "job2Description": "Modernized e-commerce management panels using Vue 3 and TypeScript. Led code quality initiatives within a 15-person Agile team.",
-    "job3Title": "Freelance Frontend Developer @ Pixa Software",
-    "job3Description": "Managed design and coding processes for corporate websites and responsive email templates.",
-    "job4Title": "Co-Founder & Team Lead @ Visioncore (Startup)",
-    "job4Description": "Developed an automated vehicle tracking system for Mercedes-Benz Authorized Services. Trained a Computer Vision model for Solar Panel Defect Detection. Led a cross-functional team of 12 developers."
+    "job1Title": "Software Developer @ Çetintaş Bilgi Teknolojileri - Didoda A.Ş.",
+    "job1Description": "Developing scalable Odoo ERP modules fully compliant with Turkish legislation (e-Invoice, e-Archive, e-Waybill). Optimizing complex data structures with Python and PostgreSQL while delivering custom localization and integration solutions for enterprise clients. Specialized in GİB (Revenue Administration) integrations and XML schema management, contributing to digital transformation initiatives across organizations.",
+    "job1Stack": "Python, Odoo Framework, PostgreSQL, XML",
+    "job2Title": "Frontend Developer @ Inovapin - Digital Product Marketplace",
+    "job2Description": "Architected a high-traffic e-pin marketplace from scratch using React and TypeScript, improving page load times by 35%. Designed a modular component library with 20+ reusable UI blocks. Integrated Go-based APIs with TanStack Router.",
+    "job2Stack": "React 19+, TypeScript, TanStack Query, Vite",
+    "job3Title": "Software Developer @ NIK YKS Koçluğu - EdTech Platform",
+    "job3Description": "Built an AI-powered exam preparation platform for university entrance exam students, scaling to 2000+ active users. Implemented live 'Study Room' features via WebSocket to enhance teacher-student interaction. Developed personalized study scheduling and topic tracking AI algorithms, reducing operational workload by 20 hours/week. Delivered high-performance user experience with React-based modern UI and Node.js backend architecture.",
+    "job3Stack": "React, Node.js, WebSocket, AI Integration",
+    "job4Title": "Frontend Developer @ Pixa Software WMS",
+    "job4Description": "Modernized e-commerce management panels using Vue 3 and TypeScript, achieving a 60% reduction in load times. Resolved critical race conditions and memory leaks. Led code quality initiatives within a 15-person Agile team.",
+    "job4Stack": "Vue 3, TypeScript, SCSS, Agile",
+    "job5Title": "Freelance Frontend Developer @ Pixa Software",
+    "job5Description": "Developed corporate websites using WordPress and PHP, managing the entire process from design to deployment. Created modern, mobile-responsive solutions supporting companies' digital branding initiatives. Designed responsive HTML newsletter architectures integrated with Mailchimp and compatible with major email clients. Delivered web projects that strengthened clients' digital brand identity.",
+    "job5Stack": "HTML5, SCSS, Responsive Design, Email Testing",
+    "job6Title": "Co-Founder & Team Lead @ Visioncore (Startup)",
+    "job6Description": "Co-founded a tech startup during university, developing license plate recognition and automated vehicle tracking for Mercedes-Benz Authorized Services. Trained a Computer Vision model detecting 10 defect classes on solar panels (OpenCV, TensorFlow). Led a 12-person software and engineering team, coordinating the entire development lifecycle from ideation to MVP. Gained hands-on experience in business development and technical leadership within the startup ecosystem.",
+    "job6Stack": "Python, OpenCV, TensorFlow, IoT",
+    "job7Title": "Freelance Web Developer @ Armek Mechatronics",
+    "job7Description": "Developed a corporate website from scratch for a mechatronics company. Built a modern CMS infrastructure using WordPress and PHP, increasing visitor engagement by 30% through SEO optimization and responsive design. Delivered a professional web interface showcasing the company's products and services catalog.",
+    "job7Stack": "WordPress, PHP, CSS, SEO"
+  },
+  "Experience": {
+    "title": "Work Experience",
+    "subtitle": "Explore my projects by company",
+    "hoverText": "Hover to explore",
+    "projects": "projects",
+    "present": "Present",
+    "companies": {
+      "cetintas": {
+        "name": "Çetintaş Bilgi Teknolojileri",
+        "position": "Software Developer",
+        "period": "Sep 2025 - Present",
+        "location": "İzmir, Turkey",
+        "projects": {
+          "odoo": "Scalable Odoo ERP modules 100% compliant with Turkish legislation (e-Invoice, e-Archive, e-Waybill). Complex data structure optimization with Python & PostgreSQL. GİB integrations and XML schema management.",
+          "inovapin": "High-traffic e-pin marketplace from scratch with React & TypeScript. 35% faster page loads. Go API integration with TanStack Router, 40% reduction in redundant requests.",
+          "workcube": "Cyprus legislation-compliant ERP development. Enterprise business management solutions with ColdFusion."
+        }
+      },
+      "nikYks": {
+        "name": "NIK YKS Koçluğu",
+        "position": "Software Developer",
+        "period": "Feb 2024 - Present",
+        "location": "İzmir, Turkey",
+        "projects": {
+          "edtech": "Launched AI-powered exam prep platform scaling to 2000+ users. Real-time 'Study Room' with WebSockets. AI planning algorithms reduced workload by 20hrs/week."
+        }
+      },
+      "pixaWms": {
+        "name": "Pixa Software - WMS",
+        "position": "Frontend Developer",
+        "period": "Jan 2025 - Aug 2025",
+        "location": "İzmir, Turkey",
+        "projects": {
+          "wms": "Modernized e-commerce management panels with Vue 3 & TypeScript, achieving 60% load time reduction. Resolved critical race conditions and memory leaks. Led code quality initiatives in 15-person Agile team."
+        }
+      },
+      "pixaFreelance": {
+        "name": "Pixa Software",
+        "position": "Freelance Frontend Developer",
+        "period": "Aug 2025 - Present",
+        "location": "İzmir, Turkey",
+        "projects": {
+          "website": "Managed design and coding for corporate websites, ensuring pixel-perfect interface integration. Responsive HTML newsletters compatible with major email clients."
+        }
+      },
+      "armek": {
+        "name": "Armek Mechatronics",
+        "position": "Freelance Web Developer",
+        "period": "2023",
+        "location": "İzmir, Turkey",
+        "projects": {
+          "website": "Developed corporate website from scratch for mechatronics company. Built modern CMS with WordPress and PHP, increasing visitor engagement by 30%."
+        }
+      },
+      "visioncore": {
+        "name": "Visioncore (Startup)",
+        "position": "Co-Founder & Team Lead",
+        "period": "2023",
+        "location": "İzmir, Turkey",
+        "projects": {
+          "ai": "Automated vehicle tracking for Mercedes-Benz Authorized Services. Trained Computer Vision model for Solar Panel Defect Detection (10 defect classes). Led 12-person cross-functional team."
+        }
+      }
+    }
   }
 }

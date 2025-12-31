@@ -2,12 +2,12 @@
 
 import { HeroSection } from "@/components/ui/hero-section-dark";
 import { HeroEnding } from "@/components/ui/hero-ending";
-import { cn } from "@/lib/utils";
 import { ProfileCard } from "@/components/ui/profile-card";
 import { TechImpactCard } from "@/components/ui/tech-impact-card";
 import { ContactCTACard } from "@/components/ui/contact-cta-card";
 import { GlowingBentoCard } from "@/components/ui/glowing-bento-card";
 import { CurrentStatusCard } from "@/components/ui/skills-marquee";
+import { Timeline } from "@/components/ui/timeline";
 import { useTimelineData } from "@/data/timeline";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
@@ -29,15 +29,6 @@ const GlobeCard = dynamic(
       <div className="h-full w-full animate-pulse bg-neutral-100 dark:bg-neutral-900 rounded-lg" />
     ),
     ssr: false,
-  }
-);
-
-const Timeline = dynamic(
-  () => import("@/components/ui/timeline").then((mod) => mod.Timeline),
-  {
-    loading: () => (
-      <div className="h-96 w-full animate-pulse bg-neutral-100 dark:bg-neutral-900 rounded-lg" />
-    ),
   }
 );
 
@@ -101,7 +92,7 @@ export default function Home() {
         </h2>
 
         {/* Glowing Bento Grid Layout */}
-        <ul className="grid grid-cols-1 gap-4 min-[1080px]:grid-cols-12 min-[1080px]:grid-rows-3">
+        <ul className="grid grid-cols-1 gap-4 min-[1080px]:grid-cols-12 min-[1080px]:grid-rows-[300px_300px_300px ]">
           {/* Row 1: Profile + TechImpact (Combined) */}
           <GlowingBentoCard className="min-[1080px]:[grid-area:1/1/2/9]">
             <ProfileCard
@@ -137,17 +128,23 @@ export default function Home() {
         </ul>
       </section>
 
+      {/* Experience - Timeline */}
+      <section id="experience" className="max-w-5xl mx-auto px-4 py-20">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-foreground">
+          {t("Timeline.mainTitle")}
+        </h2>
+        <p className="text-center text-muted-foreground mb-12">
+          {t("Timeline.mainDescription")}
+        </p>
+        <Timeline data={timelineData} />
+      </section>
+
       {/* Testimonials */}
       <section className="max-w-7xl mx-auto px-4 py-20">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-foreground">
           {t("Testimonials.title")}
         </h2>
         <TestimonialsEditorial />
-      </section>
-
-      {/* Timeline - Experience */}
-      <section id="experience">
-        <Timeline data={timelineData} />
       </section>
 
       {/* Contact - Let's Work Together */}

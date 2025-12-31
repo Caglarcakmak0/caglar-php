@@ -123,13 +123,91 @@
     "mainTitle": "Deneyimlerim",
     "mainDescription": "Yıllar içerisindeki deneyimlerim",
     "present": "Şu An",
-    "job1Title": "Yazılım Geliştiricisi @ Çetintaş Bilgi Teknolojileri",
-    "job1Description": "Türk mevzuatına uygun (e-Fatura, e-Arşiv) ölçeklenebilir Odoo ERP modülleri geliştiriyorum.",
-    "job2Title": "Frontend Geliştirici @ Pixa Software WMS",
-    "job2Description": "Vue 3 ve TypeScript kullanarak e-ticaret yönetim panellerini modernize ettim. 15 kişilik Agile ekibinde kod kalitesi girişimlerine destek verdim.",
-    "job3Title": "Freelance Frontend Geliştirici @ Pixa Software",
-    "job3Description": "Kurumsal web siteleri ve duyarlı e-posta şablonları için tasarım ve kodlama süreçlerini yönettim.",
-    "job4Title": "Kurucu Ortak ve Ekip Lideri @ Visioncore (Girişim)",
-    "job4Description": "Mercedes-Benz Yetkili Servisleri için otomatik araç takip sistemi geliştirdim. Güneş Paneli Kusur Tespiti için Bilgisayarlı Görü modeli eğittim. 12 geliştiriciden oluşan çapraz fonksiyonel ekibe liderlik ettim."
+    "job1Title": "Yazılım Geliştiricisi @ Çetintaş Bilgi Teknolojileri - Didoda A.Ş.",
+    "job1Description": "Türk mevzuatına tam uyumlu (e-Fatura, e-Arşiv, e-İrsaliye) ölçeklenebilir Odoo ERP modülleri geliştiriyorum. Python ve PostgreSQL ile karmaşık veri yapılarını optimize ediyor, kurumsal müşterilere özel yerelleştirme ve entegrasyon çözümleri sunuyorum. GİB (Gelir İdaresi Başkanlığı) entegrasyonları ve XML şema yönetimi konularında uzmanlaşarak, şirketlerin dijital dönüşüm süreçlerine katkı sağlıyorum.",
+    "job1Stack": "Python, Odoo Framework, PostgreSQL, XML",
+    "job2Title": "Frontend Geliştirici @ Inovapin - Dijital Ürün Pazaryeri",
+    "job2Description": "Sıfırdan React ve TypeScript ile yüksek trafikli e-pin pazaryeri kurdum, sayfa yükleme sürelerini %35 iyileştirdim. 20+ yeniden kullanılabilir UI bloğu ile modüler komponent kütüphanesi tasarladım.",
+    "job2Stack": "React 19+, TypeScript, TanStack Query, Vite",
+    "job3Title": "Yazılım Geliştiricisi @ NIK YKS Koçluğu - EdTech Platformu",
+    "job3Description": "YKS öğrencileri için 2000+ aktif kullanıcıya ölçeklenen AI destekli sınav hazırlık platformu geliştirdim. WebSocket ile canlı 'Ders Odası' özellikleri sayesinde öğretmen-öğrenci etkileşimini artırdım. Kişiselleştirilmiş ders programı ve konu takibi sunan AI planlama algoritmaları ile haftalık operasyonel yükü 20 saat azalttım. React tabanlı modern arayüz ve Node.js backend mimarisi ile yüksek performanslı kullanıcı deneyimi sağladım.",
+    "job3Stack": "React, Node.js, WebSocket, AI Integration",
+    "job4Title": "Frontend Geliştirici @ Pixa Software WMS",
+    "job4Description": "Vue 3 ve TypeScript kullanarak e-ticaret yönetim panellerini modernize ettim, yükleme sürelerini %60 azalttım. Kritik race condition ve memory leak sorunlarını çözdüm. 15 kişilik Agile ekipte kod kalitesi standartları oluşturdum.",
+    "job4Stack": "Vue 3, TypeScript, SCSS, Agile",
+    "job5Title": "Freelance Frontend Geliştirici @ Pixa Software",
+    "job5Description": "WordPress ve PHP kullanarak kurumsal web siteleri geliştirdim, tasarımdan kodlamaya tüm süreci yönettim. Şirketlerin dijital branding süreçlerini destekleyen modern ve mobil uyumlu çözümler ürettim. Mailchimp ve benzeri platformlarla entegre, büyük e-posta istemcileriyle uyumlu responsive HTML bülten mimarileri tasarladım. Müşteri markalarının dijital kimliğini güçlendiren web projeleri teslim ettim.",
+    "job5Stack": "HTML5, SCSS, Responsive Design, Email Testing",
+    "job6Title": "Kurucu Ortak & Ekip Lideri @ Visioncore (Girişim)",
+    "job6Description": "Üniversite döneminde kurduğum teknoloji girişiminde, Mercedes-Benz Yetkili Servisleri için plaka tanıma ve otomatik araç takip sistemi geliştirdim. Güneş panellerinde 10 farklı kusur sınıfını tespit eden Bilgisayarlı Görü modeli eğittim (OpenCV, TensorFlow). 12 kişilik yazılım ve mühendislik ekibine liderlik ederek, fikir aşamasından MVP'ye kadar tüm geliştirme süreçlerini koordine ettim. Startup ekosisteminde iş geliştirme ve teknik liderlik deneyimi kazandım.",
+    "job6Stack": "Python, OpenCV, TensorFlow, IoT",
+    "job7Title": "Freelance Web Geliştiricisi @ Armek Mekatronik",
+    "job7Description": "Mekatronik firması için sıfırdan kurumsal web sitesi geliştirdim. WordPress ve PHP kullanarak modern CMS altyapısı kurdum, SEO optimizasyonu ve responsive tasarım ile ziyaretçi etkileşimini %30 artırdım. Şirketin dijital varlığını güçlendiren, ürün ve hizmet katalogunu sergileyen profesyonel web arayüzü teslim ettim.",
+    "job7Stack": "WordPress, PHP, CSS, SEO"
+  },
+  "Experience": {
+    "title": "İş Deneyimim",
+    "subtitle": "Şirketlere göre projelerimi keşfet",
+    "hoverText": "Keşfetmek için üzerine gel",
+    "projects": "proje",
+    "present": "Devam Ediyor",
+    "companies": {
+      "cetintas": {
+        "name": "Çetintaş Bilgi Teknolojileri",
+        "position": "Yazılım Geliştirici",
+        "period": "Eylül 2025 - Devam Ediyor",
+        "location": "İzmir, Türkiye",
+        "projects": {
+          "odoo": "Türk mevzuatına %100 uyumlu ölçeklenebilir Odoo ERP modülleri (e-Fatura, e-Arşiv, e-İrsaliye). Python & PostgreSQL ile karmaşık veri yapıları optimizasyonu. GİB entegrasyonları ve XML şema yönetimi.",
+          "inovapin": "React ve TypeScript ile sıfırdan yüksek trafikli e-pin pazaryeri. %35 daha hızlı sayfa yükleme. TanStack Router ile Go API entegrasyonu, %40 daha az gereksiz istek.",
+          "workcube": "Kıbrıs'ın mevzuatına uygun ERP geliştirme. ColdFusion ile kurumsal iş yönetimi çözümleri."
+        }
+      },
+      "nikYks": {
+        "name": "NIK YKS Koçluğu",
+        "position": "Yazılım Geliştirici",
+        "period": "Şubat 2024 - Devam Ediyor",
+        "location": "İzmir, Türkiye",
+        "projects": {
+          "edtech": "2000+ kullanıcıya ölçeklenen AI destekli sınav hazırlık platformu. WebSocket ile gerçek zamanlı 'Ders Odası'. Haftalık 20 saat iş yükü azaltan AI planlama algoritmaları."
+        }
+      },
+      "pixaWms": {
+        "name": "Pixa Software - WMS",
+        "position": "Frontend Geliştirici",
+        "period": "Ocak 2025 - Ağustos 2025",
+        "location": "İzmir, Türkiye",
+        "projects": {
+          "wms": "Vue 3 ve TypeScript ile e-ticaret yönetim panellerini modernize ettim, %60 yükleme süresi azalttım. Kritik race condition ve memory leak sorunlarını çözdüm. 15 kişilik Agile ekipte kod kalitesi standartları oluşturdum."
+        }
+      },
+      "pixaFreelance": {
+        "name": "Pixa Software",
+        "position": "Freelance Frontend Geliştirici",
+        "period": "Ağustos 2025 - Devam Ediyor",
+        "location": "İzmir, Türkiye",
+        "projects": {
+          "website": "Kurumsal web siteleri için piksel mükemmel arayüz tasarım ve kodlama. Büyük e-posta istemcileriyle uyumlu responsive HTML bülten mimarileri."
+        }
+      },
+      "armek": {
+        "name": "Armek Mekatronik",
+        "position": "Freelance Web Geliştiricisi",
+        "period": "2023",
+        "location": "İzmir, Türkiye",
+        "projects": {
+          "website": "Mekatronik firması için sıfırdan kurumsal web sitesi geliştirdim. WordPress ve PHP ile modern CMS altyapısı kurdum, ziyaretçi etkileşimini %30 artırdım."
+        }
+      },
+      "visioncore": {
+        "name": "Visioncore (Startup)",
+        "position": "Kurucu Ortak & Ekip Lideri",
+        "period": "2023",
+        "location": "İzmir, Türkiye",
+        "projects": {
+          "ai": "Mercedes-Benz Yetkili Servisleri için otomatik araç takip sistemi. 10 farklı kusur sınıfını tanıyan Güneş Paneli Kusur Tespiti için CV modeli. 12 kişilik ekip liderliği."
+        }
+      }
+    }
   }
 }

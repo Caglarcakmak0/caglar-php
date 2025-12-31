@@ -3,15 +3,15 @@
 import { cn } from "@/lib/utils";
 import {
   SiNodedotjs,
-  SiMongodb,
-  SiPrisma,
+  SiPostgresql,
+  SiPython,
   SiGit,
   SiGithub,
   SiTypescript,
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiDocker,
+  SiVuedotjs,
 } from "@icons-pack/react-simple-icons";
 import { Lock, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -27,12 +27,12 @@ const techStack = [
   { name: "React", icon: SiReact, color: "#61DAFB" },
   { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
   { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "PostgreSQL", icon: SiMongodb, color: "#336791" },
-  { name: "Python", icon: SiPrisma, color: "#3776AB" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+  { name: "Python", icon: SiPython, color: "#3776AB" },
   { name: "Git", icon: SiGit, color: "#F05032" },
   { name: "GitHub", icon: SiGithub, color: "#181717" },
   { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Vue.js", icon: SiDocker, color: "#4FC08D" },
+  { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
 ];
 
 const TechImpactCard = ({
@@ -44,7 +44,7 @@ const TechImpactCard = ({
   return (
     <div
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-2xl min-h-[500px] min-[1080px]:min-h-0",
+        "group relative flex flex-col overflow-hidden rounded-2xl min-h-[400px] min-[1080px]:min-h-0",
         "bg-white dark:bg-slate-900",
         "border border-slate-200/50 dark:border-slate-700/50",
         className

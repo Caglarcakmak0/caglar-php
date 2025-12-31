@@ -309,7 +309,7 @@ export function LetsWorkTogether() {
             {t("projectQuestion")} {t("description")}
           </p>
           <span className="text-xs tracking-widest uppercase text-muted-foreground/60">
-            caglarcakmak@caglarcakmak.site
+            caglarcakmak0@icloud.com
           </span>
         </div>
       </div>
