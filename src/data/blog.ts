@@ -16,6 +16,91 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 2,
+    slug: "ai-destekli-harvard-style-cv-hazirlama-rehberi",
+    title: "Modern Kariyerin Anahtarı: AI Destekli Harvard Style CV Hazırlama Rehberi",
+    excerpt:
+      "Günümüz iş dünyasında, özellikle teknoloji sektöründe, binlerce başvuru arasından sıyrılmak sadece ne bildiğinizle değil, bunu nasıl sunduğunuzla ilgili.",
+    content: `
+# Modern Kariyerin Anahtarı: AI Destekli Harvard Style CV Hazırlama Rehberi
+
+Günümüz iş dünyasında, özellikle teknoloji sektöründe, binlerce başvuru arasından sıyrılmak sadece ne bildiğinizle değil, bunu nasıl sunduğunuzla ilgili. Şirketlerin kullandığı **ATS (Aday Takip Sistemleri)** yazılımları, karmaşık tasarımlı CV'leri anlamlandırmakta zorlanırken; sadelik, rakamlar ve netlik kazanan taraf oluyor.
+
+Bu yazıda, dünyaca kabul görmüş **Harvard CV formatını** ve bu formatı sizin yerinize en mükemmel şekilde uygulayacak **özel bir yapay zeka promptunu** paylaşacağım.
+
+---
+
+## Neden Harvard Style CV?
+
+Harvard formatı; gösterişten uzak, tamamen başarı odaklı ve hiyerarşisi net bir yapı sunar. Bu formatın altın kurallarını bilmek, profesyonelliğinizi ilk bakışta kanıtlar:
+
+*   **Sayfa Sınırı:** Eğer 10 yıldan az (örneğin 3 yıl gibi) bir deneyime sahipseniz, CV'niz **kesinlikle tek sayfa** olmalıdır.
+*   **Görsellik:** Fotoğraf, grafik veya karmaşık sütunlar yok. Siyah metin, beyaz arka plan.
+*   **Hiyerarşi:** En güncel deneyiminiz her zaman en üstte yer alır.
+
+---
+
+## Kusursuz Bir CV İçin 7 Altın Kural
+
+Bir CV'yi "iyi"den "mükemmel"e taşıyan, profesyonel recruiter'ların dikkat ettiği 7 kritik nokta vardır:
+
+1.  🔵 **Kişiselleştirilmiş Özet:** Genel ifadelerden kaçının, doğrudan ilandaki beklentilere cevap verin.
+2.  🟠 **Şirket Bağlamı:** Sadece şirket ismini yazmayın. Şirketin ölçeğini (örn: "100M+ kullanıcılı fintech girişimi") belirterek başarınıza derinlik katın.
+3.  🔴 **Güçlü Fiiller:** "Yaptım, yardım ettim" yerine "Geliştirdim (Built)", "Optimize ettim (Optimized)", "Yönettim (Spearheaded)" gibi aksiyon fiilleri kullanın.
+4.  🟣 **Skill Entegrasyonu:** Yetkinliklerinizi sadece bir liste olarak değil, deneyimlerinizin içine yedirerek kanıtlayın.
+5.  🟡 **Rakamların Gücü (XYZ Formülü):** "Performansı artırdım" değil, "Veritabanı sorgularını optimize ederek yükleme süresini %40 azalttım" deyin.
+6.  🟢 **Şirket Faydası:** Teknik başarınızın şirkete sağladığı maddi veya operasyonel faydayı vurgulayın.
+7.  ⚪ **Sadelik:** Maksimum 1-2 yazı tipi, PDF formatı ve tertemiz bir düzen.
+
+---
+
+## Kendi AI Kariyer Danışmanınızı Oluşturun
+
+Aşağıdaki promptu ChatGPT, Claude veya Gemini gibi gelişmiş bir yapay zekaya vererek, yukarıdaki tüm kurallara uygun, ATS dostu bir HTML CV taslağı oluşturabilirsiniz.
+
+### 🤖 Kullanılacak AI Promptu
+
+\`\`\`markdown
+# Role: Senior Harvard Career Coach & ATS Specialist
+
+Sen, Harvard Business School (HBS) standartlarında CV hazırlama konusunda uzmanlaşmış bir kariyer danışmanısın. Görevin, kullanıcıyı "Google-style" başarı odaklı bir CV oluşturması için yönlendirmek ve sonunda profesyonel bir HTML CV sunmaktır.
+
+## 🎓 ÖNEMLİ BİLGİLENDİRME (Kullanıcıya Sunulacak)
+CV'yi hazırlamaya başlamadan önce kullanıcıyı şu konularda uyar:
+- 10 yıldan az deneyimi olan profesyoneller için CV kesinlikle 1 sayfa olmalıdır.
+- Fotoğraf kullanılmamalı, sadece metin ve başarı odaklı olunmalıdır.
+- Tarihler sağa, başlıklar sola yaslı olmalıdır.
+
+## 🛠 UYULMASI ZORUNLU KURALLAR
+- Rakamlarla Başarı (XYZ Formülü): "X işini yaptım, Y sonucu aldım, bunu Z yöntemiyle başardım."
+- Şirket Açıklaması: Her şirketin altına ölçeğini belirten 1 cümle ekle.
+- Güçlü Fiiller: Her madde güçlü bir aksiyon fiili ile başlamalı.
+- Format: HTML/CSS yapısında, sadece siyah-beyaz, sade ve profesyonel.
+
+## 📋 İŞ AKIŞI
+1. Adım: Kullanıcıdan hedef rolü, deneyimlerini ve eğitim bilgilerini iste.
+2. Adım: Kullanıcının verilerini analiz et, eksik rakamsal veriler veya şirket açıklamaları varsa bunları soru sorarak tamamla.
+3. Adım: Tüm bilgiler netleştiğinde Harvard standartlarında HTML kodunu üret.
+\`\`\`
+
+---
+
+## Sonuç
+
+Doğru bir CV, sadece bir liste değil; sizin iş dünyasındaki "değer önerinizdir". Yapay zekayı bir araç olarak kullanıp Harvard standartlarını uygulayarak, hayalinizdeki pozisyonun kapısını aralayabilirsiniz.
+
+**Siz de kendi deneyimlerinizi bu formatta optimize etmek ister misiniz? Instagram'dan CV'nizi bana atın, birlikte optimize edelim: [@caglarflint](https://instagram.com/caglarflint)**
+    `,
+    featuredImage: "/blog/harvard-cv-guide.png",
+    date: "2026-01-18",
+    readTime: "4",
+    tags: ["Kariyer", "CV Hazırlama", "Harvard Formatı", "Yapay Zeka", "ATS"],
+    author: {
+      name: "Çağlar Çakmak",
+      avatar: "/profile.jpg",
+    },
+  },
+  {
     id: 1,
     slug: "0-dan-1-e-mvp-taslagi-adim-adim-tam-kilavuz",
     title: "0→1 MVP Taslağı: Adım Adım Tam Kılavuz",
