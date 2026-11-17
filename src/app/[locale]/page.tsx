@@ -129,9 +129,6 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* Projects */}
-      <ProjectsSection />
-
       {/* Experience - Timeline */}
       <section id="experience" className="max-w-5xl mx-auto px-4 py-20">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-foreground">
@@ -142,6 +139,9 @@ export default function Home() {
         </p>
         <Timeline data={timelineData} />
       </section>
+
+      {/* Projects */}
+      <ProjectsSection />
 
       {/* Testimonials */}
       <section className="max-w-7xl mx-auto px-4 py-20">

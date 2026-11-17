@@ -81,7 +81,7 @@ const TechImpactCard = ({
       )}
     >
       {/* Top Section: Tech Stack */}
-      <div className="p-6 mb-20">
+      <div className="p-6 pb-2">
         {/* Header */}
         <div className="mb-4">
           <h3 className="bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 bg-clip-text text-xl font-bold text-transparent">
@@ -153,7 +153,7 @@ const TechImpactCard = ({
       </div>
 
       {/* Bottom Section: Browser Mockup */}
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-center">
+      <div className="relative mt-auto flex items-end justify-center pt-4">
         {/* Background Glow Effect */}
         <div
           className={cn(

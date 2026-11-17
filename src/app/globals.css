@@ -152,6 +152,34 @@ h6 {
   animation: marquee var(--duration, 50s) linear infinite;
 }
 
+/* Hero avatar float */
+@keyframes hero-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-3deg);
+  }
+}
+
+.animate-hero-float {
+  animation: hero-float 3.5s ease-in-out infinite;
+}
+
+/* Tech badges around the about avatar */
+@keyframes badge-float {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, calc(-50% - 4px));
+  }
+}
+
+.animate-badge-float {
+  animation: badge-float 4s ease-in-out infinite;
+}
+
 /* Reverse marquee animation */
 @keyframes marquee-reverse {
   0% {

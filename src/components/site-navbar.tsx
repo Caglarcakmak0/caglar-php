@@ -23,8 +23,8 @@ export function SiteNavbar() {
   const navItems = [
     { name: t("Nav.about"), link: "/#about" },
     { name: t("Nav.blog"), link: "/blog" },
-    { name: t("Nav.projects"), link: "/#projects" },
     { name: t("Nav.experience"), link: "/#experience" },
+    { name: t("Nav.projects"), link: "/#projects" },
     { name: t("Nav.contact"), link: "/#contact" },
   ];
 

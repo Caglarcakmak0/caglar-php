@@ -33,6 +33,10 @@ const GlobeCard = ({
     window.addEventListener("resize", onResize);
     onResize();
 
+    // Globe turns with page scroll, eased so it glides instead of jumping.
+    const basePhi = 4.5;
+    let phi = basePhi;
+
     let globe: ReturnType<typeof createGlobe>;
     try {
       globe = createGlobe(canvasRef.current!, {
@@ -52,7 +56,9 @@ const GlobeCard = ({
         { location: [38.4237, 27.1428], size: 0.05 }, // İzmir, Turkey
       ],
       onRender: (state) => {
-        // Static globe - no rotation
+        const target = basePhi + window.scrollY * 0.002;
+        phi += (target - phi) * 0.08;
+        state.phi = phi;
         state.width = width * 2;
         state.height = width * 2;
       },

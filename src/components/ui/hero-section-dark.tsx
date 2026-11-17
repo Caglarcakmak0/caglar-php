@@ -120,8 +120,9 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-center text-gray-800 dark:text-gray-100 leading-tight mb-8">
-            {headline.regular}
-            <em className="italic">{headline.italic}</em>
+            {headline.regular.trim()}
+            <br />
+            <em className="italic whitespace-nowrap">{headline.italic}</em>
           </h1>
 
           {/* Profile Section */}
@@ -130,13 +131,23 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               {profile.greeting} {profile.name}
             </span>
             {profile.image ? (
-              <Image
-                src={profile.image}
-                alt={profile.name}
-                width={48}
-                height={48}
-                className="rounded-full border-2 border-blue-400/50"
-              />
+              <span className="relative inline-flex h-12 w-12 shrink-0 animate-hero-float motion-reduce:animate-none">
+                <span
+                  aria-hidden="true"
+                  className="absolute -inset-2 rounded-full bg-blue-500/30 blur-md animate-pulse motion-reduce:animate-none"
+                />
+                <span
+                  aria-hidden="true"
+                  className="absolute -inset-[3px] rounded-full bg-[conic-gradient(from_0deg,#60a5fa,#a78bfa,#f472b6,#22d3ee,#60a5fa)] animate-spin [animation-duration:4s] motion-reduce:animate-none"
+                />
+                <Image
+                  src={profile.image}
+                  alt={profile.name}
+                  width={48}
+                  height={48}
+                  className="relative h-12 w-12 rounded-full border-2 border-background object-cover"
+                />
+              </span>
             ) : (
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold">
                 {profile.name.charAt(0)}
