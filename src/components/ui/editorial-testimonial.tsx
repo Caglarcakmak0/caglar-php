@@ -8,26 +8,25 @@ import { useTranslations } from "next-intl";
 const TestimonialsEditorial = () => {
   const t = useTranslations("Testimonials");
 
-  const testimonials = [
-    {
-      id: 1,
-      quote: t("quote1"),
-      author: t("author1"),
-      role: t("role1"),
-      company: t("company1"),
-      date: t("date1"),
-      image: "/emrebost.jpg",
-    },
-    {
-      id: 2,
-      quote: t("quote2"),
-      author: t("author2"),
-      role: t("role2"),
-      company: t("company2"),
-      date: t("date2"),
-      image: "/egetuzn.jpg",
-    },
+  // Order matches messages: Testimonials.quote1..quote4
+  const images = [
+    "/jonathan-beltran.jpg",
+    "/egetuzn.jpg",
+    "/hakan-giray.jpg",
+    "/emrebost.jpg",
   ];
+  const testimonials = images.map((image, i) => {
+    const n = i + 1;
+    return {
+      id: n,
+      quote: t(`quote${n}`),
+      author: t(`author${n}`),
+      role: t(`role${n}`),
+      company: t(`company${n}`),
+      date: t(`date${n}`),
+      image,
+    };
+  });
 
   const [active, setActive] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -123,10 +122,14 @@ const TestimonialsEditorial = () => {
                 <p className="font-medium text-foreground">{current.author}</p>
                 <p className="text-sm text-muted-foreground">
                   {current.role}
-                  <span className="mx-2 text-foreground/20">/</span>
-                  <span className="group-hover:text-foreground transition-colors duration-300">
-                    {current.company}
-                  </span>
+                  {current.company && (
+                    <>
+                      <span className="mx-2 text-foreground/20">/</span>
+                      <span className="group-hover:text-foreground transition-colors duration-300">
+                        {current.company}
+                      </span>
+                    </>
+                  )}
                 </p>
                 <p className="text-xs text-muted-foreground mt-0.5">
                   {current.date}
