@@ -13,8 +13,17 @@
   "Hero": {
     "badge": "Müsait",
     "badgeAction": "Yeni fırsatlara açığım!",
-    "headlineRegular": "Yapay zeka ajanlarının arkasındaki ",
-    "headlineItalic": "altyapıyı kuruyorum",
+    "credential": "YC mühendisi · eski Apple, Amazon ve Havelsan mühendislerinden referanslı",
+    "headlinePrefix": "",
+    "headlineWords": [
+      "Yapay zeka ajanlarının",
+      "LLM eğitiminin",
+      "model değerlendirmenin",
+      "RL eğitim süreçlerinin",
+      "GPU kümelerinin",
+      "araştırma panellerinin"
+    ],
+    "headlineSuffix": "arkasındaki altyapıyı kuruyorum",
     "greeting": "Merhaba, ben",
     "name": "Çağlar Çakmak",
     "role": "Yazılım Mühendisi",

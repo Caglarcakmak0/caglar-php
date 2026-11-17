@@ -62,9 +62,11 @@ export default function Home() {
             text: t("Hero.badge"),
             action: t("Hero.badgeAction"),
           }}
+          credential={t("Hero.credential")}
           headline={{
-            regular: t("Hero.headlineRegular"),
-            italic: t("Hero.headlineItalic"),
+            prefix: t("Hero.headlinePrefix"),
+            words: t.raw("Hero.headlineWords") as string[],
+            suffix: t("Hero.headlineSuffix"),
           }}
           profile={{
             greeting: t("Hero.greeting"),

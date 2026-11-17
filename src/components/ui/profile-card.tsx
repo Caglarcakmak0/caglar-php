@@ -118,15 +118,25 @@ const CollabGridSVG = () => (
 const SVG_SCALE = 704 / 637;
 const SVG_OFFSET_Y = (300 - 250 * SVG_SCALE) / 2;
 
-const techBadges: { name: string; icon: ElementType; color: string; x: number; y: number }[] = [
-  { name: "React", icon: SiReact, color: "#61DAFB", x: 92, y: 47 },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6", x: 149, y: 73 },
-  { name: "Python", icon: SiPython, color: "#3776AB", x: 196, y: 53 },
-  { name: "Go", icon: SiGo, color: "#00ADD8", x: 243, y: 73 },
-  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5", x: 394, y: 73 },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791", x: 441, y: 53 },
-  { name: "Docker", icon: SiDocker, color: "#2496ED", x: 488, y: 73 },
-  { name: "Claude", icon: SiClaude, color: "#D97757", x: 545, y: 47 },
+// Scattered on the loops at irregular angles and sizes, kept clear of the avatar.
+const techBadges: {
+  name: string;
+  icon: ElementType;
+  color: string;
+  x: number;
+  y: number;
+  size: number;
+  rotate: number;
+  duration: number;
+}[] = [
+  { name: "React", icon: SiReact, color: "#61DAFB", x: 100, y: 62, size: 36, rotate: -8, duration: 4.2 },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6", x: 144, y: 83, size: 30, rotate: 6, duration: 3.6 },
+  { name: "Python", icon: SiPython, color: "#3776AB", x: 218, y: 58, size: 44, rotate: -4, duration: 5 },
+  { name: "Go", icon: SiGo, color: "#00ADD8", x: 259, y: 131, size: 30, rotate: 10, duration: 3.8 },
+  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5", x: 413, y: 60, size: 40, rotate: 7, duration: 4.6 },
+  { name: "Claude", icon: SiClaude, color: "#D97757", x: 377, y: 131, size: 32, rotate: -10, duration: 4 },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791", x: 500, y: 98, size: 34, rotate: -5, duration: 3.4 },
+  { name: "Docker", icon: SiDocker, color: "#2496ED", x: 572, y: 38, size: 38, rotate: 8, duration: 4.8 },
 ];
 
 const TechBadges = () => (
@@ -134,19 +144,25 @@ const TechBadges = () => (
     aria-hidden="true"
     className="pointer-events-none absolute top-0 left-1/2 h-[300px] w-[704px] -translate-x-1/2 [mask-image:linear-gradient(to_right,transparent,black_20%,black_90%,transparent)]"
   >
-    {techBadges.map(({ name, icon: Icon, color, x, y }, i) => (
+    {techBadges.map(({ name, icon: Icon, color, x, y, size, rotate, duration }, i) => (
       <span
         key={name}
         title={name}
-        className="absolute flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-md animate-badge-float motion-reduce:animate-none dark:border-slate-700 dark:bg-slate-900"
+        className="absolute flex items-center justify-center rounded-full border border-slate-200 bg-white shadow-md animate-badge-float motion-reduce:animate-none dark:border-slate-700 dark:bg-slate-900"
         style={{
           left: x * SVG_SCALE,
           top: SVG_OFFSET_Y + y * SVG_SCALE,
+          width: size,
+          height: size,
           transform: "translate(-50%, -50%)",
-          animationDelay: `${i * -0.5}s`,
+          animationDuration: `${duration}s`,
+          animationDelay: `${i * -0.7}s`,
         }}
       >
-        <Icon className="h-5 w-5" color={color} />
+        <Icon
+          color={color}
+          style={{ width: size * 0.5, height: size * 0.5, transform: `rotate(${rotate}deg)` }}
+        />
       </span>
     ))}
   </div>

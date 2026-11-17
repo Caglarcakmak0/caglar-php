@@ -13,8 +13,17 @@
   "Hero": {
     "badge": "Available",
     "badgeAction": "Open to new opportunities!",
-    "headlineRegular": "Building the infrastructure behind ",
-    "headlineItalic": "AI agents",
+    "credential": "YC engineer · referred by ex-Apple, Amazon & Havelsan engineers",
+    "headlinePrefix": "Building the infrastructure behind",
+    "headlineWords": [
+      "AI agents",
+      "LLM training",
+      "model evaluation",
+      "RL training runs",
+      "GPU clusters",
+      "research dashboards"
+    ],
+    "headlineSuffix": "",
     "greeting": "Hello, I'm",
     "name": "Çağlar Çakmak",
     "role": "Software Engineer",

@@ -4,7 +4,9 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Copy } from "lucide-react";
 import { ShootingStars } from "@/components/ui/shooting-stars";
-import Image from "next/image";
+import { SiYcombinator } from "@icons-pack/react-simple-icons";
+import { HeroAvatar } from "@/components/ui/hero-avatar";
+import { RotatingWords } from "@/components/ui/rotating-words";
 
 interface HeroSectionProps {
   className?: string;
@@ -12,9 +14,11 @@ interface HeroSectionProps {
     text: string;
     action: string;
   };
+  credential?: string;
   headline?: {
-    regular: string;
-    italic: string;
+    prefix: string;
+    words: string[];
+    suffix: string;
   };
   profile?: {
     greeting: string;
@@ -37,9 +41,11 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         text: "Upcoming",
         action: "Nextnode is launching soon!",
       },
+      credential,
       headline = {
-        regular: "I help founders turn ideas into seamless ",
-        italic: "digital experiences",
+        prefix: "I help founders turn ideas into seamless",
+        words: ["digital experiences"],
+        suffix: "",
       },
       profile = {
         greeting: "Hello, I'm",
@@ -118,11 +124,32 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             </span>
           </div>
 
+          {/* Credential */}
+          {credential && (
+            <p className="mb-6 flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-center text-xs sm:text-sm font-medium text-orange-700 dark:text-orange-200">
+              <SiYcombinator className="h-4 w-4 shrink-0" color="#F0652F" aria-hidden="true" />
+              {credential}
+            </p>
+          )}
+
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-center text-gray-800 dark:text-gray-100 leading-tight mb-8">
-            {headline.regular.trim()}
-            <br />
-            <em className="italic whitespace-nowrap">{headline.italic}</em>
+            {headline.prefix && (
+              <>
+                {headline.prefix}
+                <br />
+              </>
+            )}
+            <RotatingWords
+              words={headline.words}
+              className="italic bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent"
+            />
+            {headline.suffix && (
+              <>
+                <br />
+                {headline.suffix}
+              </>
+            )}
           </h1>
 
           {/* Profile Section */}
@@ -131,23 +158,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               {profile.greeting} {profile.name}
             </span>
             {profile.image ? (
-              <span className="relative inline-flex h-12 w-12 shrink-0 animate-hero-float motion-reduce:animate-none">
-                <span
-                  aria-hidden="true"
-                  className="absolute -inset-2 rounded-full bg-blue-500/30 blur-md animate-pulse motion-reduce:animate-none"
-                />
-                <span
-                  aria-hidden="true"
-                  className="absolute -inset-[3px] rounded-full bg-[conic-gradient(from_0deg,#60a5fa,#a78bfa,#f472b6,#22d3ee,#60a5fa)] animate-spin [animation-duration:4s] motion-reduce:animate-none"
-                />
-                <Image
-                  src={profile.image}
-                  alt={profile.name}
-                  width={48}
-                  height={48}
-                  className="relative h-12 w-12 rounded-full border-2 border-background object-cover"
-                />
-              </span>
+              <HeroAvatar src={profile.image} alt={profile.name} />
             ) : (
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold">
                 {profile.name.charAt(0)}
