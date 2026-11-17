@@ -122,7 +122,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-center text-gray-800 dark:text-gray-100 leading-tight mb-8">
+          <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl font-serif text-center text-gray-800 dark:text-gray-100 leading-tight mb-8">
             {headline.prefix && (
               <>
                 {headline.prefix}

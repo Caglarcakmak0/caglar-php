@@ -22,7 +22,7 @@ export function RotatingWords({ words, interval = 2600, className }: RotatingWor
   }, [reduceMotion, words.length, interval]);
 
   return (
-    <span className="relative inline-grid overflow-hidden align-bottom">
+    <span className="relative inline-grid max-w-full overflow-hidden align-bottom">
       <AnimatePresence mode="wait" initial={false}>
         <motion.em
           key={words[index]}
@@ -30,7 +30,7 @@ export function RotatingWords({ words, interval = 2600, className }: RotatingWor
           animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
           exit={{ y: "-0.6em", opacity: 0, filter: "blur(6px)" }}
           transition={{ duration: 0.45, ease: [0.2, 0.8, 0.3, 1] }}
-          className={cn("whitespace-nowrap pr-[0.12em] pb-[0.08em]", className)}
+          className={cn("text-balance sm:whitespace-nowrap pr-[0.12em] pb-[0.08em]", className)}
         >
           {words[index]}
         </motion.em>
