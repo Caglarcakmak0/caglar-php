@@ -12,7 +12,6 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { LanguageSwitcher } from "@/components/language-switcher";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
@@ -36,7 +35,6 @@ export function SiteNavbar() {
           <NavItems items={navItems} />
           <div className="relative z-[90] flex items-center gap-4">
             <ThemeToggle />
-            <LanguageSwitcher />
           </div>
         </NavBody>
 
@@ -65,7 +63,6 @@ export function SiteNavbar() {
             ))}
             <div className="mt-2 flex w-full justify-center gap-4">
               <ThemeToggle />
-              <LanguageSwitcher />
             </div>
           </MobileNavMenu>
         </MobileNav>

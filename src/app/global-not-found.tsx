@@ -31,21 +31,12 @@ export default function GlobalNotFound() {
         <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-6 text-center">
           <p className="text-sm tracking-widest text-muted-foreground">404</p>
           <h1 className="text-5xl md:text-7xl">Page not found</h1>
-          <p lang="tr" className="text-muted-foreground">
-            Sayfa bulunamadı
-          </p>
           <nav className="mt-2 flex gap-3">
             <a
               href="/en/"
               className="inline-flex min-h-11 items-center rounded-full bg-foreground px-6 text-sm font-medium text-background"
             >
-              English
-            </a>
-            <a
-              href="/tr/"
-              className="inline-flex min-h-11 items-center rounded-full border border-border px-6 text-sm font-medium text-foreground"
-            >
-              Türkçe
+              Go to homepage
             </a>
           </nav>
         </main>

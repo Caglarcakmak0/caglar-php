@@ -33,7 +33,6 @@ export async function generateMetadata({
       canonical: path,
       languages: {
         en: `/en/blog/${post.slug}/`,
-        tr: `/tr/blog/${post.slug}/`,
         "x-default": `/en/blog/${post.slug}/`,
       },
     },

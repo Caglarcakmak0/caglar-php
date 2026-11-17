@@ -13,7 +13,7 @@
   "Hero": {
     "badge": "Available",
     "badgeAction": "Open to new opportunities!",
-    "credential": "YC engineer · referred by ex-Apple, Amazon & Havelsan engineers",
+    "credential": "Engineer from a YC startup · Referred by ex-Apple & Amazon engineers",
     "headlinePrefix": "Building the infrastructure behind",
     "headlineWords": [
       "AI agents",
@@ -132,7 +132,6 @@
     "description2": "Earlier in my career, I built e-commerce and business automation software, co-founded a computer-vision startup, and developed an AI-powered education platform serving more than 3,000 active users. Working closely with customers and researchers taught me to connect engineering decisions to the people using the product. I’m particularly interested in backend engineering, AI infrastructure, and product roles where I can contribute across system boundaries and own features end to end. Based in Türkiye, I’m open to fully remote opportunities with international teams.",
     "quote": "I believe in waking up each day eager to make a difference!",
     "iCode": "I Code",
-    "iExercise": "I Exercise",
     "iRide": "I Ride"
   },
   "Timeline": {

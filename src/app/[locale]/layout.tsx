@@ -43,7 +43,6 @@ export async function generateMetadata({
       canonical: `/${locale}/`,
       languages: {
         en: "/en/",
-        tr: "/tr/",
         "x-default": "/en/",
       },
     },
@@ -53,7 +52,6 @@ export async function generateMetadata({
       type: "website",
       url: `/${locale}/`,
       locale: locale === "tr" ? "tr_TR" : "en_US",
-      alternateLocale: locale === "tr" ? ["en_US"] : ["tr_TR"],
       siteName: "Çağlar Çakmak",
       images: [
         {

@@ -26,11 +26,6 @@ export const useAboutMeData = () => {
         caption: t("iCode"),
       },
       {
-        src: "/spor.jpeg",
-        alt: "Sports",
-        caption: t("iExercise"),
-      },
-      {
         src: "/motor.jpeg",
         alt: "Motorcycle",
         caption: t("iRide"),
@@ -65,11 +60,6 @@ export const getAboutMeData = async (locale: string) => {
         src: "/kod.jpeg",
         alt: "Coding",
         caption: t("iCode"),
-      },
-      {
-        src: "/spor.jpeg",
-        alt: "Sports",
-        caption: t("iExercise"),
       },
       {
         src: "/motor.jpeg",

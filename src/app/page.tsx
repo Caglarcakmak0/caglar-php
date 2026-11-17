@@ -10,7 +10,7 @@ export default function RootPage() {
       <link rel="canonical" href="https://caglarcakmak.site/en/" />
       <script dangerouslySetInnerHTML={{ __html: redirectScript }} />
       <noscript>
-        <a href="/en/">English</a> · <a href="/tr/">Türkçe</a>
+        <a href="/en/">Continue to the site</a>
       </noscript>
     </>
   );
