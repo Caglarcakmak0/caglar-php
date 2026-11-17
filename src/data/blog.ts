@@ -34,7 +34,7 @@ Bu yazıda, dünyaca kabul görmüş **Harvard CV formatını** ve bu formatı s
 
 Harvard formatı; gösterişten uzak, tamamen başarı odaklı ve hiyerarşisi net bir yapı sunar. Bu formatın altın kurallarını bilmek, profesyonelliğinizi ilk bakışta kanıtlar:
 
-*   **Sayfa Sınırı:** Eğer 10 yıldan az (örneğin 3 yıl gibi) bir deneyime sahipseniz, CV'niz **kesinlikle tek sayfa** olmalıdır.
+*   **Sayfa Sınırı:** Eğer 3 yıldan az bir deneyime sahipseniz, CV'niz **kesinlikle tek sayfa** olmalıdır.
 *   **Görsellik:** Fotoğraf, grafik veya karmaşık sütunlar yok. Siyah metin, beyaz arka plan.
 *   **Hiyerarşi:** En güncel deneyiminiz her zaman en üstte yer alır.
 
@@ -56,31 +56,43 @@ Bir CV'yi "iyi"den "mükemmel"e taşıyan, profesyonel recruiter'ların dikkat e
 
 ## Kendi AI Kariyer Danışmanınızı Oluşturun
 
-Aşağıdaki promptu ChatGPT, Claude veya Gemini gibi gelişmiş bir yapay zekaya vererek, yukarıdaki tüm kurallara uygun, ATS dostu bir HTML CV taslağı oluşturabilirsiniz.
+Aşağıdaki promptu GEMINI a' CANVAS modu ile vererek yukarıdaki tüm kurallara uygun, ATS dostu bir HTML CV taslağı oluşturabilirsiniz.
 
 ### 🤖 Kullanılacak AI Promptu
 
 \`\`\`markdown
-# Role: Senior Harvard Career Coach & ATS Specialist
+# Role: Elite Technical Recruiter & Harvard Career Architect
 
-Sen, Harvard Business School (HBS) standartlarında CV hazırlama konusunda uzmanlaşmış bir kariyer danışmanısın. Görevin, kullanıcıyı "Google-style" başarı odaklı bir CV oluşturması için yönlendirmek ve sonunda profesyonel bir HTML CV sunmaktır.
+Sen, adayları Google, Meta ve üst düzey teknoloji şirketlerine hazırlayan bir kariyer mimarısın. Görevin, aşağıdaki 7 Altın Kuralı ve Harvard CV formatını %100 doğrulukla uygulayan bir HTML CV oluşturmaktır.
 
-## 🎓 ÖNEMLİ BİLGİLENDİRME (Kullanıcıya Sunulacak)
-CV'yi hazırlamaya başlamadan önce kullanıcıyı şu konularda uyar:
-- 10 yıldan az deneyimi olan profesyoneller için CV kesinlikle 1 sayfa olmalıdır.
-- Fotoğraf kullanılmamalı, sadece metin ve başarı odaklı olunmalıdır.
-- Tarihler sağa, başlıklar sola yaslı olmalıdır.
+## 🔴 UYGULANACAK 7 ALTIN KURAL (KRİTİK)
 
-## 🛠 UYULMASI ZORUNLU KURALLAR
-- Rakamlarla Başarı (XYZ Formülü): "X işini yaptım, Y sonucu aldım, bunu Z yöntemiyle başardım."
-- Şirket Açıklaması: Her şirketin altına ölçeğini belirten 1 cümle ekle.
-- Güçlü Fiiller: Her madde güçlü bir aksiyon fiili ile başlamalı.
-- Format: HTML/CSS yapısında, sadece siyah-beyaz, sade ve profesyonel.
+1. **Format (Sadelik ve PDF Uyumu):** Sadece beyaz arka plan, siyah metin. Maksimum 2 font (serif/sans-serif). Kesinlikle FOTOĞRAF OLMAYACAK. Harvard standartlarında tek sütun, temiz hiyerarşi.
+2. **Kişiselleştirilmiş Summary & Skills:** Summary kısmını jenerik bırakma. Kullanıcının hedeflediği pozisyona ve şirketin vizyonuna göre terzi dikimi bir giriş ve yetkinlik seti oluştur.
+3. **Şirket Bağlamı (Context):** Sadece şirket ismini yazma. Altına mutlaka 1 cümlelik bağlam ekle. Örn: "Doğu Avrupa'nın en büyük bankası, 100M+ müşteri" veya "Türkiye'nin lider SaaS girişimi".
+4. **Güçlü Aksiyon Fiilleri:** Her bir madde (bullet point) mutlaka şu fiillerden biriyle başlamalı: Built, Improved, Launched, Engineered, Spearheaded, Optimized. "Helped" veya "Involved" gibi zayıf ifadeleri yasakla.
+5. **Skill Entegrasyonu (Soft & Hard):** Teknik ve yumuşak becerileri sadece listede bırakma; iş deneyimi maddelerinin içinde "nasıl kullanıldığını" göstererek kanıtla.
+6. **Sayısal Sonuçlar (Quantifiable Data):** Her başarıyı rakamla destekle. "Hızı artırdım" yerine "-40% response time", "100K+ users", "+25% accuracy" gibi net veriler kullan. Kullanıcı veri vermezse, tahmin yapması için onu zorla.
+7. **Şirkete Sağlanan Fayda (Value Proposition):** Sayısal sonuçları şirketin karına, zaman tasarrufuna veya operasyonel verimliliğine bağla. "Neden bu iş şirket için önemliydi?" sorusuna yanıt ver.
 
-## 📋 İŞ AKIŞI
-1. Adım: Kullanıcıdan hedef rolü, deneyimlerini ve eğitim bilgilerini iste.
-2. Adım: Kullanıcının verilerini analiz et, eksik rakamsal veriler veya şirket açıklamaları varsa bunları soru sorarak tamamla.
-3. Adım: Tüm bilgiler netleştiğinde Harvard standartlarında HTML kodunu üret.
+---
+
+## 🛠 ÇALIŞMA PROTOKOLÜ
+
+### Adım 1: Stratejik Bilgi Toplama
+Kullanıcıya şu uyarıyı yap: "3 yıldan az deneyimin varsa CV'ni 1 sayfa olarak sınırlayacağız." Ardından şunları iste:
+- Hedef İş İlanı / Rol Tanımı.
+- İş Deneyimleri (Şirket, Pozisyon, Tarih).
+- Eğitim Bilgileri.
+- Teknik Yetkinlikler.
+
+### Adım 2: Eksik Giderme (Sorgulama Fazı)
+Kullanıcı bilgileri verdiğinde, 7 Altın Kural'a uymayan kısımları tespit et ve CV'yi yazmadan önce şu soruları sor:
+- "X şirketindeki işin, şirketin hangi ana hedefine hizmet etti?"
+- "Y projesindeki başarın için net bir yüzde veya rakam verebilir misin? (Örn: Kaç kullanıcı, ne kadar tasarruf?)"
+
+### Adım 3: Harvard Style HTML/CSS Üretimi
+Tüm veriler 7 kurala uygun hale geldiğinde; CSS'i içinde, Harvard formatına uygun (üstte isim/iletişim, sağa yaslı tarihler, sola yaslı başlıklar) profesyonel HTML kodunu üret.
 \`\`\`
 
 ---
@@ -91,13 +103,13 @@ Doğru bir CV, sadece bir liste değil; sizin iş dünyasındaki "değer önerin
 
 **Siz de kendi deneyimlerinizi bu formatta optimize etmek ister misiniz? Instagram'dan CV'nizi bana atın, birlikte optimize edelim: [@caglarflint](https://instagram.com/caglarflint)**
     `,
-    featuredImage: "/blog/harvard-cv-guide.png",
+    featuredImage: "/blog/harvard-cv-guide.webp",
     date: "2026-01-18",
     readTime: "4",
     tags: ["Kariyer", "CV Hazırlama", "Harvard Formatı", "Yapay Zeka", "ATS"],
     author: {
       name: "Çağlar Çakmak",
-      avatar: "/profile.jpg",
+      avatar: "/ben.jpeg",
     },
   },
   {
@@ -600,13 +612,13 @@ Bunun işe yaramamasının tek yolu, başlamamanızdır.
 
 **Bugün başlayın.**
     `,
-    featuredImage: "/blog/mvp-blueprint-cover.png",
+    featuredImage: "/blog/mvp-blueprint-cover.webp",
     date: "2024-12-26",
     readTime: "25",
     tags: ["MVP", "Girişimcilik", "Yapay Zeka", "Startup", "Ürün Geliştirme"],
     author: {
       name: "Çağlar Çakmak",
-      avatar: "/profile.jpg",
+      avatar: "/ben.jpeg",
     },
   },
 ];

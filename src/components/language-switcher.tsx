@@ -14,7 +14,11 @@ export function LanguageSwitcher() {
   function toggleLanguage() {
     const nextLocale = locale === "en" ? "tr" : "en";
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      const hash = typeof window !== "undefined" ? window.location.hash : "";
+      router.replace(`${pathname}${hash}` as typeof pathname, {
+        locale: nextLocale,
+        scroll: false,
+      });
     });
   }
 
@@ -29,7 +33,7 @@ export function LanguageSwitcher() {
       <span className="sr-only">
         {locale === "en" ? "Türkçe'ye geç" : "Switch to English"}
       </span>
-      <span className="text-sm font-medium uppercase">{locale}</span>
+      <span lang="en" className="text-sm font-medium uppercase" aria-hidden="true">{locale}</span>
     </Button>
   );
 }

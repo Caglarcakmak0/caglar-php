@@ -7,6 +7,7 @@ import { TechImpactCard } from "@/components/ui/tech-impact-card";
 import { ContactCTACard } from "@/components/ui/contact-cta-card";
 import { GlowingBentoCard } from "@/components/ui/glowing-bento-card";
 import { CurrentStatusCard } from "@/components/ui/skills-marquee";
+import { ProjectsSection } from "@/components/ui/projects-section";
 import { Timeline } from "@/components/ui/timeline";
 import { useTimelineData } from "@/data/timeline";
 import dynamic from "next/dynamic";
@@ -92,7 +93,7 @@ export default function Home() {
         </h2>
 
         {/* Glowing Bento Grid Layout */}
-        <ul className="grid grid-cols-1 gap-4 min-[1080px]:grid-cols-12 min-[1080px]:grid-rows-[300px_300px_300px ]">
+        <ul className="grid grid-cols-1 gap-4 min-[1080px]:grid-cols-12 min-[1080px]:grid-rows-[300px_300px_300px]">
           {/* Row 1: Profile + TechImpact (Combined) */}
           <GlowingBentoCard className="min-[1080px]:[grid-area:1/1/2/9]">
             <ProfileCard
@@ -127,6 +128,9 @@ export default function Home() {
           </GlowingBentoCard>
         </ul>
       </section>
+
+      {/* Projects */}
+      <ProjectsSection />
 
       {/* Experience - Timeline */}
       <section id="experience" className="max-w-5xl mx-auto px-4 py-20">

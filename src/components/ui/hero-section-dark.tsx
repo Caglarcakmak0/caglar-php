@@ -109,7 +109,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         <section className="relative z-20 max-w-5xl mx-auto px-4 py-28 flex flex-col items-center justify-center min-h-screen">
           {/* Badge */}
           <div className="flex items-center gap-2 mb-8">
-            <span className="px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded-full">
+            <span className="px-3 py-1 text-xs font-semibold bg-blue-600 text-white rounded-full">
               {badge.text}
             </span>
             <span className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
@@ -164,7 +164,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             {/* Email */}
             <button
               onClick={copyEmail}
-              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="relative flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors after:absolute after:-inset-x-2 after:-inset-y-3"
             >
               <Copy className="w-4 h-4" />
               <span className="text-sm">{copied ? "Copied!" : email}</span>

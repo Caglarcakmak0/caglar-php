@@ -1,13 +1,61 @@
+import type { Metadata } from "next";
 import { getBlogPostBySlug } from "@/data/blog";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from "lucide-react";
 import Image from "next/image";
 import { getAllBlogSlugs } from "@/data/blog";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 export function generateStaticParams() {
   const slugs = getAllBlogSlugs();
   return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: string }>;
+}): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const post = getBlogPostBySlug(slug);
+  if (!post) return {};
+
+  const path = `/${locale}/blog/${post.slug}/`;
+  const image = post.featuredImage || "/og.png";
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: path,
+      languages: {
+        en: `/en/blog/${post.slug}/`,
+        tr: `/tr/blog/${post.slug}/`,
+        "x-default": `/en/blog/${post.slug}/`,
+      },
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: path,
+      locale: locale === "tr" ? "tr_TR" : "en_US",
+      siteName: "Çağlar Çakmak",
+      publishedTime: post.date,
+      authors: [post.author.name],
+      tags: post.tags,
+      images: [{ url: image, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [image],
+    },
+  };
 }
 
 export default async function BlogPostPage({
@@ -43,7 +91,7 @@ export default async function BlogPostPage({
     );
   }
 
-  const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
+  const formattedDate = new Date(post.date).toLocaleDateString(locale === "tr" ? "tr-TR" : "en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -57,7 +105,7 @@ export default async function BlogPostPage({
           {/* Back link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors mb-8"
+            className="inline-flex items-center gap-2 py-2.5 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors mb-6"
           >
             <ArrowLeftIcon className="h-4 w-4" />
             {t("Blog.backToBlog")}
@@ -126,25 +174,18 @@ export default async function BlogPostPage({
           )}
 
           {/* Content */}
-          <div className="prose prose-lg dark:prose-invert prose-neutral max-w-none">
-            <div
-              className="[&>h1]:text-3xl [&>h1]:font-bold [&>h1]:mb-4 [&>h1]:mt-8
-                         [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mb-3 [&>h2]:mt-6
-                         [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mb-2 [&>h3]:mt-4
-                         [&>p]:mb-4 [&>p]:leading-relaxed
-                         [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-4
-                         [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-4
-                         [&>pre]:bg-neutral-100 [&>pre]:dark:bg-neutral-800 [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:overflow-x-auto [&>pre]:mb-4
-                         [&>code]:bg-neutral-100 [&>code]:dark:bg-neutral-800 [&>code]:px-1.5 [&>code]:py-0.5 [&>code]:rounded [&>code]:text-sm"
-              dangerouslySetInnerHTML={{
-                __html: post.content
-                  .replace(/\n/g, "<br>")
-                  .replace(
-                    /```(\w+)?\n?([\s\S]*?)```/g,
-                    "<pre><code>$2</code></pre>"
-                  ),
+          <div className="prose prose-lg prose-neutral max-w-none dark:prose-invert prose-headings:font-serif prose-headings:font-normal prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-xl prose-pre:rounded-lg prose-pre:bg-neutral-100 prose-pre:text-neutral-800 dark:prose-pre:bg-neutral-900 dark:prose-pre:text-neutral-200 prose-code:before:content-none prose-code:after:content-none prose-blockquote:font-normal prose-blockquote:not-italic prose-table:text-sm prose-th:text-left [&_blockquote_p::before]:content-none [&_blockquote_p::after]:content-none">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                // The page already renders the post title as the only <h1>.
+                h1: ({ children }) =>
+                  String(children) === post.title ? null : <h2>{children}</h2>,
               }}
-            />
+            >
+              {post.content}
+            </ReactMarkdown>
           </div>
         </div>
       </article>

@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig: import("next").NextConfig = {
   output: 'export',
+  experimental: {
+    globalNotFound: true,
+  },
   trailingSlash: true,
   compress: true,
   images: {

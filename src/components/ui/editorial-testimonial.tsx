@@ -59,15 +59,16 @@ const TestimonialsEditorial = () => {
   return (
     <div className="w-full max-w-2xl mx-auto px-6 py-16">
       {/* Large index number */}
-      <div className="flex items-start gap-8">
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:gap-8">
         <span
+          aria-hidden="true"
           className="text-[60px] md:text-[80px] lg:text-[120px] font-light leading-none text-foreground/10 select-none transition-all duration-500"
           style={{ fontFeatureSettings: '"tnum"' }}
         >
           {String(active + 1).padStart(2, "0")}
         </span>
 
-        <div className="flex-1 pt-6 text-foreground">
+        <div className="w-full flex-1 pt-0 text-foreground sm:pt-6">
           {/* Quote Container */}
           <div className="relative">
             <div
@@ -94,7 +95,7 @@ const TestimonialsEditorial = () => {
                 <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background via-background/80 to-transparent flex items-end justify-end pb-0 pr-4">
                   <button
                     onClick={() => setIsExpanded(true)}
-                    className="text-sm font-medium text-primary hover:text-primary/80 transition-colors bg-background/50 backdrop-blur-sm px-4 py-1 rounded-full border border-border/50"
+                    className="text-sm font-medium text-primary hover:text-primary/80 transition-colors bg-background/50 backdrop-blur-sm min-h-10 px-4 py-2 rounded-full border border-border/50"
                   >
                     {t("readMore")}
                   </button>
@@ -139,12 +140,13 @@ const TestimonialsEditorial = () => {
       {/* Navigation - vertical line selector */}
       <div className="mt-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleChange(index)}
-                className="group relative py-4"
+                aria-label={`Testimonial ${index + 1}`}
+                className="group relative px-2 py-5"
               >
                 <span
                   className={`block h-px transition-all duration-500 ease-out ${
@@ -165,15 +167,17 @@ const TestimonialsEditorial = () => {
         <div className="flex items-center gap-1">
           <button
             onClick={handlePrev}
-            className="p-2 rounded-full text-foreground/40 hover:text-foreground hover:bg-foreground/5 transition-all duration-300"
+            aria-label="Previous testimonial"
+            className="p-2.5 rounded-full text-foreground/40 hover:text-foreground hover:bg-foreground/5 transition-all duration-300"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-5 h-5" aria-hidden="true" />
           </button>
           <button
             onClick={handleNext}
-            className="p-2 rounded-full text-foreground/40 hover:text-foreground hover:bg-foreground/5 transition-all duration-300"
+            aria-label="Next testimonial"
+            className="p-2.5 rounded-full text-foreground/40 hover:text-foreground hover:bg-foreground/5 transition-all duration-300"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
       </div>

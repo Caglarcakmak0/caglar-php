@@ -16,8 +16,7 @@ export function SiteFooter() {
               Çağlar Çakmak
             </h3>
             <p className="text-muted-foreground max-w-md">
-              Full Stack Developer specializing in modern web technologies.
-              Building seamless digital experiences with Next.js & WordPress.
+              {t("Footer.tagline")}
             </p>
           </div>
 
@@ -26,11 +25,11 @@ export function SiteFooter() {
             <h4 className="font-semibold text-foreground mb-4">
               {t("Footer.quickLinks")}
             </h4>
-            <ul className="space-y-2">
+            <ul>
               <li>
                 <Link
-                  href="/about"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  href="/#about"
+                  className="block py-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t("Nav.about")}
                 </Link>
@@ -38,7 +37,7 @@ export function SiteFooter() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="block py-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t("Nav.blog")}
                 </Link>
@@ -46,7 +45,7 @@ export function SiteFooter() {
               <li>
                 <Link
                   href="/#projects"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="block py-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t("Nav.projects")}
                 </Link>
@@ -54,7 +53,7 @@ export function SiteFooter() {
               <li>
                 <Link
                   href="/#contact"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="block py-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t("Nav.contact")}
                 </Link>
@@ -67,35 +66,35 @@ export function SiteFooter() {
             <h4 className="font-semibold text-foreground mb-4">
               {t("Footer.connect")}
             </h4>
-            <ul className="space-y-2">
+            <ul>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Caglarcakmak0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="block py-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   GitHub
                 </a>
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/caglarcakmak0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="block py-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   LinkedIn
                 </a>
               </li>
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="/Caglar-Cakmak-CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="block py-2.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Twitter
+                  {t("Footer.cv")}
                 </a>
               </li>
             </ul>

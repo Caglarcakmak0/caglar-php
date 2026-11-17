@@ -22,10 +22,6 @@ export function LetsWorkTogether() {
     }, 500);
   };
 
-  const handleBookCall = () => {
-    window.open("https://cal.com/jatin-yadav05/15min", "_blank");
-  };
-
   return (
     <section className="flex min-h-screen items-center justify-center px-6">
       <div className="relative flex flex-col items-center gap-12">
@@ -148,7 +144,7 @@ export function LetsWorkTogether() {
 
           {/* Subtle subtext */}
           <span
-            className="text-xs tracking-widest uppercase text-muted-foreground/50 transition-all duration-500"
+            className="text-xs tracking-widest uppercase text-muted-foreground transition-all duration-500"
             style={{
               transform: showSuccess ? "translateY(0)" : "translateY(10px)",
               opacity: showSuccess ? 1 : 0,
@@ -220,7 +216,7 @@ export function LetsWorkTogether() {
                         : "translateY(0)",
                   }}
                 >
-                  <span className="text-muted-foreground/60">
+                  <span className="text-muted-foreground">
                     {t("together")}
                   </span>
                 </span>
@@ -308,7 +304,7 @@ export function LetsWorkTogether() {
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
             {t("projectQuestion")} {t("description")}
           </p>
-          <span className="text-xs tracking-widest uppercase text-muted-foreground/60">
+          <span lang="en" className="text-xs tracking-widest uppercase text-muted-foreground">
             caglarcakmak0@icloud.com
           </span>
         </div>

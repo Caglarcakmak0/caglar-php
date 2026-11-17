@@ -25,17 +25,51 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://caglarcakmak.site";
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}) {
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
+    alternates: {
+      canonical: `/${locale}/`,
+      languages: {
+        en: "/en/",
+        tr: "/tr/",
+        "x-default": "/en/",
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      url: `/${locale}/`,
+      locale: locale === "tr" ? "tr_TR" : "en_US",
+      alternateLocale: locale === "tr" ? ["en_US"] : ["tr_TR"],
+      siteName: "Çağlar Çakmak",
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/og.png"],
+    },
   };
 }
 
@@ -53,7 +87,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
@@ -63,10 +97,34 @@ export default async function RootLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages({ locale });
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Çağlar Çakmak",
+    jobTitle: locale === "tr" ? "Yazılım Mühendisi" : "Software Engineer",
+    description: t("description"),
+    url: "https://caglarcakmak.site",
+    email: "caglarcakmak0@icloud.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "İzmir",
+      addressCountry: "TR",
+    },
+    sameAs: [
+      "https://linkedin.com/in/caglarcakmak0",
+      "https://github.com/Caglarcakmak0",
+    ],
+  };
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

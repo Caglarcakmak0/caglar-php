@@ -1,20 +1,30 @@
 "use client";
 
+import type { ElementType } from "react";
 import { cn } from "@/lib/utils";
 import {
   SiNodedotjs,
   SiPostgresql,
   SiPython,
-  SiGit,
-  SiGithub,
+  SiGo,
   SiTypescript,
+  SiJavascript,
+  SiGnubash,
   SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
   SiVuedotjs,
+  SiKubernetes,
+  SiRay,
+  SiNvidia,
+  SiWeightsandbiases,
+  SiDocker,
+  SiModelcontextprotocol,
+  SiClaude,
+  SiOpenai,
+  SiGithubactions,
+  SiOdoo,
 } from "@icons-pack/react-simple-icons";
 import { Lock, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
 interface TechImpactCardProps {
@@ -22,17 +32,37 @@ interface TechImpactCardProps {
   websiteUrl?: string;
 }
 
-const techStack = [
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+const techStack: {
+  name: string;
+  icon?: ElementType;
+  color?: string;
+}[] = [
   { name: "Python", icon: SiPython, color: "#3776AB" },
-  { name: "Git", icon: SiGit, color: "#F05032" },
-  { name: "GitHub", icon: SiGithub, color: "#181717" },
-  { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
+  { name: "Go", icon: SiGo, color: "#00ADD8" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "SQL" },
+  { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+  { name: "S3" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
+  { name: "Ray / KubeRay", icon: SiRay, color: "#028CF0" },
+  { name: "NCCL", icon: SiNvidia, color: "#76B900" },
+  { name: "HSDP" },
+  { name: "vLLM" },
+  { name: "W&B", icon: SiWeightsandbiases, color: "#FFBE00" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "MCP servers", icon: SiModelcontextprotocol, color: "#6366F1" },
+  { name: "LLM agents" },
+  { name: "LLM-as-judge eval" },
+  { name: "Claude Code", icon: SiClaude, color: "#D97757" },
+  { name: "Codex CLI", icon: SiOpenai, color: "#10A37F" },
+  { name: "AWS" },
+  { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "Vue 3", icon: SiVuedotjs, color: "#4FC08D" },
+  { name: "Odoo", icon: SiOdoo, color: "#714B67" },
 ];
 
 const TechImpactCard = ({
@@ -75,7 +105,7 @@ const TechImpactCard = ({
                 key={`row1-${index}`}
                 className="flex shrink-0 items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 dark:border-slate-700 dark:bg-slate-800"
               >
-                <tech.icon className="h-4 w-4" color={tech.color} />
+                {tech.icon && <tech.icon className="h-4 w-4" color={tech.color} />}
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                   {tech.name}
                 </span>
@@ -91,7 +121,7 @@ const TechImpactCard = ({
                   key={`row2-${index}`}
                   className="flex shrink-0 items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 dark:border-slate-700 dark:bg-slate-800"
                 >
-                  <tech.icon className="h-4 w-4" color={tech.color} />
+                  {tech.icon && <tech.icon className="h-4 w-4" color={tech.color} />}
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                     {tech.name}
                   </span>
@@ -111,7 +141,7 @@ const TechImpactCard = ({
                   key={`row3-${index}`}
                   className="flex shrink-0 items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 dark:border-slate-700 dark:bg-slate-800"
                 >
-                  <tech.icon className="h-4 w-4" color={tech.color} />
+                  {tech.icon && <tech.icon className="h-4 w-4" color={tech.color} />}
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                     {tech.name}
                   </span>
@@ -227,9 +257,9 @@ const TechImpactCard = ({
                 {/* CTA Buttons */}
                 <div className="flex gap-2 pt-2">
                   <Link
-                    href="/contact"
+                    href="/#contact"
                     className={cn(
-                      "flex items-center gap-1 rounded-full px-3 py-1",
+                      "relative flex items-center gap-1 rounded-full px-3 py-1 after:absolute after:-inset-x-1 after:-inset-y-2",
                       "bg-neutral-900 text-[10px] font-medium text-white",
                       "shadow-lg shadow-indigo-500/20",
                       "transition-all hover:bg-neutral-800 hover:shadow-indigo-500/40",
@@ -240,9 +270,9 @@ const TechImpactCard = ({
                     <ArrowRight className="size-2.5" />
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/#contact"
                     className={cn(
-                      "rounded-full border border-neutral-200 px-3 py-1",
+                      "relative rounded-full border border-neutral-200 px-3 py-1 after:absolute after:-inset-x-1 after:-inset-y-2",
                       "text-[10px] font-medium text-neutral-600",
                       "transition-colors hover:bg-neutral-100",
                       "dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800"

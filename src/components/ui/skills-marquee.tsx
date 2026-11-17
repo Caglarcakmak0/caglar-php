@@ -8,15 +8,16 @@ interface SkillsMarqueeProps {
 }
 
 const skills = [
-  { name: "E-COMMERCE", subtitle: "Full Stack Solutions", icon: "🛒" },
-  { name: "WEBSOCKET", subtitle: "Real-time Features", icon: "⚡" },
-  { name: "AI INTEGRATION", subtitle: "Smart Features", icon: "🤖" },
-  { name: "PERFORMANCE", subtitle: "Optimization", icon: "🚀" },
-  { name: "MONITORING & ANALYTICS", subtitle: "Infrastructure", icon: "📊" },
-  { name: "DESIGN SYSTEM", subtitle: "UI Consistency", icon: "🎨" },
+  { key: "languages", detail: "Python, Go, TypeScript, SQL", icon: "💻" },
+  { key: "backend", detail: "PostgreSQL, S3, Node.js", icon: "🗄️" },
+  { key: "infra", detail: "Kubernetes, Ray, NCCL, vLLM", icon: "🖥️" },
+  { key: "agents", detail: "MCP, LLM agents, LLM judges", icon: "🤖" },
+  { key: "cloud", detail: "AWS, GitHub Actions", icon: "☁️" },
+  { key: "web", detail: "React, Vue 3, Odoo", icon: "🌐" },
 ];
 
 const SkillsMarquee = ({ className }: SkillsMarqueeProps) => {
+  const t = useTranslations("SkillCategories");
   return (
     <div className={cn("relative w-full overflow-hidden py-4", className)}>
       {/* Gradient masks */}
@@ -34,14 +35,14 @@ const SkillsMarquee = ({ className }: SkillsMarqueeProps) => {
             <div className="mb-2 flex items-center gap-2">
               <span className="text-lg">{skill.icon}</span>
               <span className="text-xs font-medium uppercase text-slate-500 dark:text-slate-400">
-                {skill.name}
+                {t(`${skill.key}.name`)}
               </span>
             </div>
             <p className="text-sm font-medium text-slate-900 dark:text-white">
-              {skill.subtitle}
+              {t(`${skill.key}.subtitle`)}
             </p>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-              Step-by-step guide
+              {skill.detail}
             </p>
           </div>
         ))}
@@ -53,6 +54,7 @@ const SkillsMarquee = ({ className }: SkillsMarqueeProps) => {
 // Combined Card: CurrentStatus + SkillsMarquee
 const CurrentStatusCard = ({ className }: { className?: string }) => {
   const t = useTranslations("Status");
+  const tSkills = useTranslations("SkillCategories");
   return (
     <div
       className={cn(
@@ -84,10 +86,10 @@ const CurrentStatusCard = ({ className }: { className?: string }) => {
               style={{ minWidth: "140px" }}
             >
               <p className="text-sm font-medium text-slate-900 dark:text-white">
-                {skill.subtitle}
+                {tSkills(`${skill.key}.subtitle`)}
               </p>
-              <p className="mt-1 text-[10px] text-slate-500">
-                Step-by-step guide
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                {skill.detail}
               </p>
             </div>
           ))}
@@ -113,7 +115,7 @@ const CurrentStatusCard = ({ className }: { className?: string }) => {
             </svg>
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
+            <p className="text-xs font-medium uppercase tracking-wider text-cyan-700 dark:text-cyan-400">
               {t("insideScoop")}
             </p>
             <p className="text-xl font-semibold text-slate-900 dark:text-white">

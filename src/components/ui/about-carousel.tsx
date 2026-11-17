@@ -105,7 +105,7 @@ export const AboutCarousel = ({
             <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
               {title || (
                 <>
-                  I'm Çağlar, a
+                  I&apos;m Çağlar, a
                   <br />
                   creative{" "}
                   <span className="italic font-light bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
@@ -124,15 +124,15 @@ export const AboutCarousel = ({
               ) : (
                 <>
                   <p>
-                    I'm Çağlar Çakmak, a proactive full-stack developer
+                    I&apos;m Çağlar Çakmak, a proactive full-stack developer
                     passionate about creating dynamic web experiences. From
                     frontend to backend, I thrive on solving complex problems
                     with clean, efficient code. My expertise spans React,
-                    Next.js, and Node.js, and I'm always eager to learn more.
+                    Next.js, and Node.js, and I&apos;m always eager to learn more.
                   </p>
                   <p>
-                    When I'm not immersed in work, I'm exploring new ideas and
-                    staying curious. Life's about balance, and I love embracing
+                    When I&apos;m not immersed in work, I&apos;m exploring new ideas and
+                    staying curious. Life&apos;s about balance, and I love embracing
                     every part of it.
                   </p>
                 </>
@@ -150,31 +150,34 @@ export const AboutCarousel = ({
               {socialLinks?.linkedin && (
                 <a
                   href={socialLinks.linkedin}
+                  aria-label="LinkedIn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="relative text-muted-foreground hover:text-foreground transition-colors after:absolute after:-inset-3"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                 </a>
               )}
               {socialLinks?.github && (
                 <a
                   href={socialLinks.github}
+                  aria-label="GitHub"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="relative text-muted-foreground hover:text-foreground transition-colors after:absolute after:-inset-3"
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               )}
               {socialLinks?.twitter && (
                 <a
                   href={socialLinks.twitter}
+                  aria-label="Twitter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="relative text-muted-foreground hover:text-foreground transition-colors after:absolute after:-inset-3"
                 >
-                  <Twitter className="w-5 h-5" />
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
               )}
               {!socialLinks && (
@@ -183,25 +186,25 @@ export const AboutCarousel = ({
                     href="https://linkedin.com/in/yourcaglar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="relative text-muted-foreground hover:text-foreground transition-colors after:absolute after:-inset-3"
                   >
-                    <Linkedin className="w-5 h-5" />
+                    <Linkedin className="w-5 h-5" aria-hidden="true" />
                   </a>
                   <a
                     href="https://github.com/yourcaglar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="relative text-muted-foreground hover:text-foreground transition-colors after:absolute after:-inset-3"
                   >
-                    <Github className="w-5 h-5" />
+                    <Github className="w-5 h-5" aria-hidden="true" />
                   </a>
                   <a
                     href="https://twitter.com/yourcaglar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="relative text-muted-foreground hover:text-foreground transition-colors after:absolute after:-inset-3"
                   >
-                    <Twitter className="w-5 h-5" />
+                    <Twitter className="w-5 h-5" aria-hidden="true" />
                   </a>
                 </>
               )}
@@ -238,19 +241,24 @@ export const AboutCarousel = ({
             </div>
 
             {/* Dots Indicator */}
-            <div className="flex gap-2 mt-4">
+            <div className="flex mt-2">
               {images.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={cn(
-                    "w-2 h-2 rounded-full transition-all duration-300",
-                    index === currentIndex
-                      ? "bg-foreground w-6"
-                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                  )}
+                  className="group flex h-10 items-center justify-center px-3"
                   aria-label={`Go to slide ${index + 1}`}
-                />
+                  aria-current={index === currentIndex}
+                >
+                  <span
+                    className={cn(
+                      "block h-2 w-2 rounded-full transition-all duration-300",
+                      index === currentIndex
+                        ? "bg-foreground w-6"
+                        : "bg-muted-foreground/30 group-hover:bg-muted-foreground/50"
+                    )}
+                  />
+                </button>
               ))}
             </div>
           </div>

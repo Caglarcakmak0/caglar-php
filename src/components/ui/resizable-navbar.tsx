@@ -8,8 +8,9 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import { Link } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 
-import React, { useRef, useState, useCallback } from "react";
+import React, { useState } from "react";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -66,9 +67,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(
-              child as React.ReactElement<{ visible?: boolean }>,
-              { visible }
-            )
+            child as React.ReactElement<{ visible?: boolean }>,
+            { visible }
+          )
           : child
       )}
     </motion.div>
@@ -112,7 +113,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2 pointer-events-none z-[80]",
         className
       )}
     >
@@ -120,7 +121,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <Link
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300 cursor-pointer"
+          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300 cursor-pointer pointer-events-auto"
           key={`link-${idx}`}
           href={item.link}
         >
@@ -196,7 +197,7 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
+            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-1 rounded-lg border border-neutral-200 bg-white px-4 py-6 dark:border-neutral-800 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
             className
           )}
         >
@@ -214,8 +215,19 @@ export const MobileNavToggle = ({
   isOpen: boolean;
   onClick: () => void;
 }) => {
+  const tr = useLocale() === "tr";
   return (
-    <button onClick={onClick} className="p-1">
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={
+        tr
+          ? isOpen ? "Menüyü kapat" : "Menüyü aç"
+          : isOpen ? "Close menu" : "Open menu"
+      }
+      aria-expanded={isOpen}
+      className="flex size-11 items-center justify-center"
+    >
       <MenuToggleIcon
         open={isOpen}
         className="text-black dark:text-white size-8"
@@ -225,13 +237,15 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
+  const tr = useLocale() === "tr";
   return (
-    <a
-      href="#"
-      className="relative z-20 mr-4 flex items-center px-2 py-1 bg-white rounded-2xl"
+    <Link
+      href="/"
+      aria-label={tr ? "Ana sayfa" : "Home"}
+      className="relative z-20 mr-4 flex items-center px-2 py-1 bg-white rounded-2xl after:absolute after:-inset-x-1 after:-inset-y-2"
     >
-      <img src="/logo.png" alt="logo" width={30} height={30} />
-    </a>
+      <img src="/logo.png" alt="" width={30} height={30} />
+    </Link>
   );
 };
 
@@ -249,9 +263,9 @@ export const NavbarButton = ({
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
 } & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+    | React.ComponentPropsWithoutRef<"a">
+    | React.ComponentPropsWithoutRef<"button">
+  )) => {
   const baseStyles =
     "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 

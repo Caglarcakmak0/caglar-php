@@ -3,19 +3,21 @@
 import { cn } from "@/lib/utils";
 import { BlogPost } from "@/data/blog";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { CalendarIcon, ClockIcon, ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 
 interface BlogCardProps {
   post: BlogPost;
   className?: string;
+  priority?: boolean;
 }
 
-export function BlogCard({ post, className }: BlogCardProps) {
+export function BlogCard({ post, className, priority }: BlogCardProps) {
   const t = useTranslations("Blog");
+  const locale = useLocale();
 
-  const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
+  const formattedDate = new Date(post.date).toLocaleDateString(locale === "tr" ? "tr-TR" : "en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -42,6 +44,8 @@ export function BlogCard({ post, className }: BlogCardProps) {
             src={post.featuredImage}
             alt={post.title}
             fill
+            priority={priority}
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (

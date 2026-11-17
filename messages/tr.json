@@ -4,27 +4,26 @@
     "blog": "Blog",
     "projects": "Projeler",
     "experience": "Deneyim",
-    "contact": "İletişim",
-    "resume": "Özgeçmiş"
+    "contact": "İletişim"
   },
   "Metadata": {
-    "title": "Portfolyo - Full Stack Geliştirici",
-    "description": "Next.js & Modern Web Teknolojileri ile modern web deneyimleri inşa ediyorum"
+    "title": "Çağlar Çakmak | Yazılım Mühendisi",
+    "description": "Yapay zeka eğitim altyapısı, LLM ajan araçları ve backend sistemlerine odaklanan Yazılım Mühendisi. Python, Go, TypeScript, Kubernetes ve Ray."
   },
   "Hero": {
     "badge": "Müsait",
     "badgeAction": "Yeni fırsatlara açığım!",
-    "headlineRegular": "Fikirleri kusursuz ",
-    "headlineItalic": "dijital deneyimlere dönüştürüyorum",
+    "headlineRegular": "Yapay zeka ajanlarının arkasındaki ",
+    "headlineItalic": "altyapıyı kuruyorum",
     "greeting": "Merhaba, ben",
     "name": "Çağlar Çakmak",
-    "role": "Full Stack Developer",
+    "role": "Yazılım Mühendisi",
     "cta": "İletişime Geç"
   },
   "About": {
     "title": "Hakkımda",
     "profileTitle": "HAKKIMDA",
-    "profileDescription": "React.js, Vue.js, Node.js ,Workcube ve Odoo Framework'te 3+ yıl deneyimli Full Stack Developer",
+    "profileDescription": "Yapay zeka eğitim altyapısı, LLM ajan araçları ve backend sistemlerine odaklanan Yazılım Mühendisi. Çoğunlukla Python, Go ve TypeScript ile çalışıyorum.",
     "location": "UZAKTAN",
     "country": "İzmir, Türkiye"
   },
@@ -50,24 +49,22 @@
   },
   "Status": {
     "insideScoop": "İÇERİDEN BİLGİ",
-    "current": "Şu anda Odoo ERP modülleri & e-pin pazaryeri geliştiriyorum"
-  },
-  "Contact": {
-    "title": "Birlikte Çalışalım",
-    "subtitle": "Aklınızda bir proje mi var?",
-    "cta": "İletişime Geç"
+    "current": "Şu anda Coach Connect için yetki kapsamlı bir RAG asistanı geliştiriyorum"
   },
   "Blog": {
     "title": "Blog",
     "subtitle": "Düşünceler, öğreticiler ve içgörüler",
     "readMore": "Devamını Oku",
     "backToBlog": "Blog'a Dön",
-    "readTime": "dk okuma"
+    "readTime": "dk okuma",
+    "badge": "Yeni İçerik"
   },
   "Footer": {
     "quickLinks": "Hızlı Bağlantılar",
     "connect": "Bağlan",
-    "rights": "Tüm hakları saklıdır."
+    "rights": "Tüm hakları saklıdır.",
+    "tagline": "Yapay zeka eğitim altyapısı, LLM ajan araçları ve backend sistemleri geliştiren Yazılım Mühendisi.",
+    "cv": "Özgeçmiş"
   },
   "Skills": {
     "accessible": "Erişilebilir",
@@ -104,16 +101,16 @@
   "TechStack": {
     "passionate": "En son teknolojiler",
     "technologies": "hakkında tutkulu",
-    "websitesImpact": "Etki Yaratan Web Siteleri.",
+    "websitesImpact": "Üretimde Çalışan Yazılımlar.",
     "start": "Başla",
     "details": "Detaylar"
   },
   "AboutMe": {
     "subtitle": "HAKKIMDA DAHA FAZLASI",
-    "title": "Ben Çağlar, yaratıcı bir",
-    "titleHighlight": "Full-Stack Developer",
-    "description1": "Ben Çağlar Çakmak, dinamik web deneyimleri yaratma konusunda tutkulu, proaktif bir full-stack geliştiriciyim. Frontend'den backend'e, temiz ve verimli kodlarla karmaşık problemleri çözmeyi seviyorum. React, Next.js ve Node.js konusunda uzmanlığım var ve her zaman daha fazlasını öğrenmeye hevesliyim.",
-    "description2": "İşe dalmadığım zamanlarda, yeni fikirleri keşfediyor ve meraklı kalıyorum. Hayat denge ile ilgilidir ve her yanını kucaklamayı seviyorum.",
+    "title": "Ben Çağlar, bir",
+    "titleHighlight": "Yazılım Mühendisi",
+    "description1": "AI altyapısı, backend sistemleri ve full-stack ürün geliştirme alanlarında 4 yıllık profesyonel deneyimi olan bir Yazılım Mühendisiyim. Bir problemin sahipliğini ilk incelemeden uygulamaya, canlıya alma ve sonrasındaki güvenilirliğe kadar üstlenmeyi seviyorum. Frist'te AI ajanlarının eğitimi ve değerlendirmesinin arkasındaki altyapı ve araçlar üzerinde çalıştım. Çalışmalarım model sunum performansını, eğitim iş akışlarını, izlemeyi, erişim kontrollü API'leri ve araştırma panolarını kapsıyordu. Bu süreçte uygulama ve altyapı katmanları arasındaki darboğazları takip ettim, deneyleri yeniden üretilebilir hale getirdim ve üretim değişiklikleri sırasında araştırma verilerinin güvenilirliğini korudum.",
+    "description2": "Kariyerimin başında e-ticaret ve iş otomasyonu yazılımları geliştirdim, bir bilgisayarlı görü girişiminin kurucu ortağı oldum ve 3.000'den fazla aktif kullanıcıya hizmet veren, yapay zeka destekli bir eğitim platformu geliştirdim. Müşterilerle ve araştırmacılarla yakın çalışmak, mühendislik kararlarını ürünü kullanan insanlarla ilişkilendirmeyi öğretti. Özellikle backend mühendisliği, AI altyapısı ve sistem sınırları boyunca katkı sağlayıp özellikleri baştan sona sahiplenebileceğim ürün rollerine ilgi duyuyorum. Türkiye'de yaşıyorum ve uluslararası ekiplerle tamamen uzaktan çalışma fırsatlarına açığım.",
     "quote": "Her gün bir fark yaratmaya hevesli uyanmaya inanıyorum!",
     "iCode": "Kodlama",
     "iExercise": "Spor",
@@ -122,92 +119,87 @@
   "Timeline": {
     "mainTitle": "Deneyimlerim",
     "mainDescription": "Yıllar içerisindeki deneyimlerim",
-    "present": "Şu An",
-    "job1Title": "Yazılım Geliştiricisi @ Çetintaş Bilgi Teknolojileri - Didoda A.Ş.",
-    "job1Description": "Türk mevzuatına tam uyumlu (e-Fatura, e-Arşiv, e-İrsaliye) ölçeklenebilir Odoo ERP modülleri geliştiriyorum. Python ve PostgreSQL ile karmaşık veri yapılarını optimize ediyor, kurumsal müşterilere özel yerelleştirme ve entegrasyon çözümleri sunuyorum. GİB (Gelir İdaresi Başkanlığı) entegrasyonları ve XML şema yönetimi konularında uzmanlaşarak, şirketlerin dijital dönüşüm süreçlerine katkı sağlıyorum.",
-    "job1Stack": "Python, Odoo Framework, PostgreSQL, XML",
-    "job2Title": "Frontend Geliştirici @ Inovapin - Dijital Ürün Pazaryeri",
-    "job2Description": "Sıfırdan React ve TypeScript ile yüksek trafikli e-pin pazaryeri kurdum, sayfa yükleme sürelerini %35 iyileştirdim. 20+ yeniden kullanılabilir UI bloğu ile modüler komponent kütüphanesi tasarladım.",
-    "job2Stack": "React 19+, TypeScript, TanStack Query, Vite",
-    "job3Title": "Yazılım Geliştiricisi @ NIK YKS Koçluğu - EdTech Platformu",
-    "job3Description": "YKS öğrencileri için 2000+ aktif kullanıcıya ölçeklenen AI destekli sınav hazırlık platformu geliştirdim. WebSocket ile canlı 'Ders Odası' özellikleri sayesinde öğretmen-öğrenci etkileşimini artırdım. Kişiselleştirilmiş ders programı ve konu takibi sunan AI planlama algoritmaları ile haftalık operasyonel yükü 20 saat azalttım. React tabanlı modern arayüz ve Node.js backend mimarisi ile yüksek performanslı kullanıcı deneyimi sağladım.",
-    "job3Stack": "React, Node.js, WebSocket, AI Integration",
-    "job4Title": "Frontend Geliştirici @ Pixa Software WMS",
-    "job4Description": "Vue 3 ve TypeScript kullanarak e-ticaret yönetim panellerini modernize ettim, yükleme sürelerini %60 azalttım. Kritik race condition ve memory leak sorunlarını çözdüm. 15 kişilik Agile ekipte kod kalitesi standartları oluşturdum.",
-    "job4Stack": "Vue 3, TypeScript, SCSS, Agile",
-    "job5Title": "Freelance Frontend Geliştirici @ Pixa Software",
-    "job5Description": "WordPress ve PHP kullanarak kurumsal web siteleri geliştirdim, tasarımdan kodlamaya tüm süreci yönettim. Şirketlerin dijital branding süreçlerini destekleyen modern ve mobil uyumlu çözümler ürettim. Mailchimp ve benzeri platformlarla entegre, büyük e-posta istemcileriyle uyumlu responsive HTML bülten mimarileri tasarladım. Müşteri markalarının dijital kimliğini güçlendiren web projeleri teslim ettim.",
-    "job5Stack": "HTML5, SCSS, Responsive Design, Email Testing",
-    "job6Title": "Kurucu Ortak & Ekip Lideri @ Visioncore (Girişim)",
-    "job6Description": "Üniversite döneminde kurduğum teknoloji girişiminde, Mercedes-Benz Yetkili Servisleri için plaka tanıma ve otomatik araç takip sistemi geliştirdim. Güneş panellerinde 10 farklı kusur sınıfını tespit eden Bilgisayarlı Görü modeli eğittim (OpenCV, TensorFlow). 12 kişilik yazılım ve mühendislik ekibine liderlik ederek, fikir aşamasından MVP'ye kadar tüm geliştirme süreçlerini koordine ettim. Startup ekosisteminde iş geliştirme ve teknik liderlik deneyimi kazandım.",
-    "job6Stack": "Python, OpenCV, TensorFlow, IoT",
-    "job7Title": "Freelance Web Geliştiricisi @ Armek Mekatronik",
-    "job7Description": "Mekatronik firması için sıfırdan kurumsal web sitesi geliştirdim. WordPress ve PHP kullanarak modern CMS altyapısı kurdum, SEO optimizasyonu ve responsive tasarım ile ziyaretçi etkileşimini %30 artırdım. Şirketin dijital varlığını güçlendiren, ürün ve hizmet katalogunu sergileyen profesyonel web arayüzü teslim ettim.",
-    "job7Stack": "WordPress, PHP, CSS, SEO"
+    "job1Title": "Yazılım Mühendisi @ Frist",
+    "job1Period": "Mart 2026 - Kasım 2026",
+    "job1Description": "10 milyon dolar yatırım almış, bilgisayar kullanan ajanlar için eğitim sistemleri geliştiren bir yapay zeka şirketi.",
+    "job2Title": "İş Analisti ve Yazılım Mühendisi @ Çetintaş Bilgi Teknolojileri / Didoda A.Ş.",
+    "job2Period": "Eylül 2025 - Mart 2026",
+    "job2Description": "ERP çözümleri ve mevzuat yazılımı entegrasyonları sunan bir teknoloji şirketi.",
+    "job3Title": "Yazılım Mühendisi @ Pixa Software",
+    "job3Period": "Ocak 2025 - Ağustos 2025",
+    "job3Description": "Kurumsal e-ticaret ve depo yönetim sistemleri geliştiren bir yazılım ajansı.",
+    "job4Title": "Yazılım Mühendisi ve Kurucu Ortak @ Visioncore",
+    "job4Period": "2023 - Mart 2025",
+    "job4Description": "Kurumsal otomasyon sistemleri geliştiren bir IoT ve bilgisayarlı görü girişimi.",
+    "job1Bullets": [
+      "Ray, NCCL ve HSDP ile, 48 NVIDIA H100 ve 64 NVIDIA H200 kapasiteli iki GPU ortamında dağıtık eğitim altyapısı kurdum.",
+      "W&B, Kubernetes ve Ray üzerindeki eğitim orkestrasyonu yeniden başlatmalardan toparlanıyor, takılan işleri otomatik sonlandırarak GPU kapasitesini koruyor.",
+      "Ekran görüntüsü ön işlemesini optimize ederek tek düğümlü testte ortalama model yanıt süresini %50'den fazla düşürdüm; kayıtlı eğitim çalışmalarını bulan aracı hızlandırıp tam taramayı 125 saniyeden 5,1 saniyeye indirdim.",
+      "Üretimi PostgreSQL ve S3'e taşıdım, 708 değerlendirme sonucunu ve 793 artifact'i korudum; eğitim işlerini incelemek ve durdurmak için yetkilendirmeli, denetlenebilir REST API'ler yazdım.",
+      "Ayrıca 14 yapay zeka benchmark'ının sonuçlarını karşılaştıran bir araştırma panosu, 410 sayfa tahmininde %85 doğruluk ölçen bir değerlendirme harness'ı ve yapay zeka ile üretilmiş web sitesi kopyalarının gerçek sitelerden nerede ayrıştığını LLM yargıçları ve video tabanlı kontrollerle bulan bir tespit sistemi geliştirdim."
+    ],
+    "job2Bullets": [
+      "6 mekânı (3 restoran, 2 kafe ve bir gece kulübü) olan bir döviz bürosu holdingi için Odoo ERP projesinin iş analizini, boşluk analizinden canlıya geçişe kadar yürüttüm.",
+      "Müşterinin ana iletişim noktası olarak iş gereksinimlerini müşterinin kendi geliştiricileri için spesifikasyonlara dönüştürdüm, kapsam ve değişiklik taleplerini yönettim.",
+      "Kurulum için şirket içi (on-premise) sunucuları ayağa kaldırdım, müşterinin geliştirici ve takım liderlerine entegrasyon tasarımı konusunda danışmanlık yaptım; proje ek kapasiteye ihtiyaç duyduğunda Odoo için Python özellikleri ve düzeltmeleri yazdım, mekân çalışanlarıyla kabul testleri yürüttüm."
+    ],
+    "job3Bullets": [
+      "15 kişilik ekibin parçası olarak Vue 3 ve TypeScript ile yaptığım yeniden yapılandırmayla e-ticaret sayfa yükleme hızını %60 iyileştirdim, eşzamanlılık ve bellek sorunlarını giderdim."
+    ],
+    "job4Bullets": [
+      "12 kişilik ekibin kurucu ortağı olarak Mercedes-Benz yetkili servisleri için backend sistemleri ve iş akışı otomasyonu geliştirdim, müşteri görüşmelerini ve ürün planlamasını da üstlendim.",
+      "Kalite kontrol için 12 güneş paneli kusur sınıfını tespit eden bir bilgisayarlı görü sistemi geliştirdim."
+    ]
   },
-  "Experience": {
-    "title": "İş Deneyimim",
-    "subtitle": "Şirketlere göre projelerimi keşfet",
-    "hoverText": "Keşfetmek için üzerine gel",
-    "projects": "proje",
-    "present": "Devam Ediyor",
-    "companies": {
-      "cetintas": {
-        "name": "Çetintaş Bilgi Teknolojileri",
-        "position": "Yazılım Geliştirici",
-        "period": "Eylül 2025 - Devam Ediyor",
-        "location": "İzmir, Türkiye",
-        "projects": {
-          "odoo": "Türk mevzuatına %100 uyumlu ölçeklenebilir Odoo ERP modülleri (e-Fatura, e-Arşiv, e-İrsaliye). Python & PostgreSQL ile karmaşık veri yapıları optimizasyonu. GİB entegrasyonları ve XML şema yönetimi.",
-          "inovapin": "React ve TypeScript ile sıfırdan yüksek trafikli e-pin pazaryeri. %35 daha hızlı sayfa yükleme. TanStack Router ile Go API entegrasyonu, %40 daha az gereksiz istek.",
-          "workcube": "Kıbrıs'ın mevzuatına uygun ERP geliştirme. ColdFusion ile kurumsal iş yönetimi çözümleri."
-        }
-      },
-      "nikYks": {
-        "name": "NIK YKS Koçluğu",
-        "position": "Yazılım Geliştirici",
-        "period": "Şubat 2024 - Devam Ediyor",
-        "location": "İzmir, Türkiye",
-        "projects": {
-          "edtech": "2000+ kullanıcıya ölçeklenen AI destekli sınav hazırlık platformu. WebSocket ile gerçek zamanlı 'Ders Odası'. Haftalık 20 saat iş yükü azaltan AI planlama algoritmaları."
-        }
-      },
-      "pixaWms": {
-        "name": "Pixa Software - WMS",
-        "position": "Frontend Geliştirici",
-        "period": "Ocak 2025 - Ağustos 2025",
-        "location": "İzmir, Türkiye",
-        "projects": {
-          "wms": "Vue 3 ve TypeScript ile e-ticaret yönetim panellerini modernize ettim, %60 yükleme süresi azalttım. Kritik race condition ve memory leak sorunlarını çözdüm. 15 kişilik Agile ekipte kod kalitesi standartları oluşturdum."
-        }
-      },
-      "pixaFreelance": {
-        "name": "Pixa Software",
-        "position": "Freelance Frontend Geliştirici",
-        "period": "Ağustos 2025 - Devam Ediyor",
-        "location": "İzmir, Türkiye",
-        "projects": {
-          "website": "Kurumsal web siteleri için piksel mükemmel arayüz tasarım ve kodlama. Büyük e-posta istemcileriyle uyumlu responsive HTML bülten mimarileri."
-        }
-      },
-      "armek": {
-        "name": "Armek Mekatronik",
-        "position": "Freelance Web Geliştiricisi",
-        "period": "2023",
-        "location": "İzmir, Türkiye",
-        "projects": {
-          "website": "Mekatronik firması için sıfırdan kurumsal web sitesi geliştirdim. WordPress ve PHP ile modern CMS altyapısı kurdum, ziyaretçi etkileşimini %30 artırdım."
-        }
-      },
-      "visioncore": {
-        "name": "Visioncore (Startup)",
-        "position": "Kurucu Ortak & Ekip Lideri",
-        "period": "2023",
-        "location": "İzmir, Türkiye",
-        "projects": {
-          "ai": "Mercedes-Benz Yetkili Servisleri için otomatik araç takip sistemi. 10 farklı kusur sınıfını tanıyan Güneş Paneli Kusur Tespiti için CV modeli. 12 kişilik ekip liderliği."
-        }
-      }
+  "Projects": {
+    "title": "Projeler",
+    "subtitle": "Seçilmiş çalışmalar",
+    "coach": {
+      "name": "Coach Connect",
+      "brand": "Nikyks",
+      "period": "2024 - Günümüz",
+      "role": "Yazılım Mühendisi",
+      "description": "Koçları, Türkiye'deki üniversite sınavına (YKS) hazırlanan öğrencilerle buluşturan, 3.000 aktif kullanıcılı bir çalışma koçluğu pazaryeri.",
+      "b1": "PostgreSQL üzerinde Go ile yazılmış REST API: öğrenci, koç ve yönetici rolleri için rol tabanlı erişim, arka plan işleri ve push bildirimleri.",
+      "b2": "iyzico ile bölünmüş ödemeler: koçluk süresi bitene kadar tutar bekletilir, ardından platform komisyonu düşülerek koça aktarılır.",
+      "b3": "Öğrencilerin deneme sınavı sonuçlarına göre koç sıralaması ve koçlara hangi öğrencilerin geride kaldığını gösteren risk puanlaması.",
+      "b4": "React ve TypeScript ile öğrenci uygulaması: koç bulma, paket satın alma, haftalık ilerleme takibi ve görüntülü görüşmeler.",
+      "b5": "Devam ediyor: koçların her öğrencinin notları ve görüşme özetlerinde arama yapmasını sağlayan, yetki kapsamlı bir RAG asistanı. Hibrit arama (pgvector + Postgres tam metin) ve sınav verileri için SQL araçları kullanıyor."
+    },
+    "forge": {
+      "name": "forge",
+      "brand": "",
+      "period": "Mayıs 2026 - Temmuz 2026",
+      "role": "Lead Developer",
+      "description": "Claude Code ve Codex CLI gibi kodlama ajanları için Go ile yazılmış, otonom geliştirme iş akışı MCP sunucusu.",
+      "b1": "Bir bileti ya da düz cümleyle yazılmış hedefi birleştirilmiş pull request'e kadar taşır. İş akışını deterministik bir motor yönetir ve LLM'e her seferinde tek adım verir; ajan süreçten sapamaz.",
+      "b2": "Paralel çalıştırmalar ayrı git worktree'lerinde yürür; adversarial inceleme ajanları birleştirmeden önce gerçek hataları yakaladı."
+    }
+  },
+  "SkillCategories": {
+    "languages": {
+      "name": "Diller",
+      "subtitle": "Programlama dilleri"
+    },
+    "backend": {
+      "name": "Backend",
+      "subtitle": "Backend ve veri"
+    },
+    "infra": {
+      "name": "Yapay zeka altyapısı",
+      "subtitle": "Yapay zeka altyapısı"
+    },
+    "agents": {
+      "name": "Ajan araçları",
+      "subtitle": "Yapay zeka ve ajan araçları"
+    },
+    "cloud": {
+      "name": "Bulut",
+      "subtitle": "Bulut ve teslimat"
+    },
+    "web": {
+      "name": "Web",
+      "subtitle": "Web ve iş sistemleri"
     }
   }
 }

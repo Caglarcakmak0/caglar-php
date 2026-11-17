@@ -28,7 +28,7 @@ export function BlogHero({ className }: BlogHeroProps) {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
           </span>
           <span className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
-            Fresh Content
+            {t("badge")}
           </span>
         </div>
 

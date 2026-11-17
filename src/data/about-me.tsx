@@ -16,9 +16,8 @@ export const useAboutMeData = () => {
     description: [t("description1"), t("description2")],
     quote: t("quote"),
     socialLinks: {
-      linkedin: "https://linkedin.com/in/caglarcakmak",
-      github: "https://github.com/caglarcakmak",
-      twitter: "https://twitter.com/caglarcakmak",
+      linkedin: "https://linkedin.com/in/caglarcakmak0",
+      github: "https://github.com/Caglarcakmak0",
     },
     images: [
       {
@@ -58,9 +57,8 @@ export const getAboutMeData = async (locale: string) => {
     description: [t("description1"), t("description2")],
     quote: t("quote"),
     socialLinks: {
-      linkedin: "https://linkedin.com/in/caglarcakmak",
-      github: "https://github.com/caglarcakmak",
-      twitter: "https://twitter.com/caglarcakmak",
+      linkedin: "https://linkedin.com/in/caglarcakmak0",
+      github: "https://github.com/Caglarcakmak0",
     },
     images: [
       {

@@ -33,7 +33,9 @@ const GlobeCard = ({
     window.addEventListener("resize", onResize);
     onResize();
 
-    const globe = createGlobe(canvasRef.current!, {
+    let globe: ReturnType<typeof createGlobe>;
+    try {
+      globe = createGlobe(canvasRef.current!, {
       devicePixelRatio: 2,
       width: width * 2,
       height: width * 2,
@@ -54,7 +56,12 @@ const GlobeCard = ({
         state.width = width * 2;
         state.height = width * 2;
       },
-    });
+      });
+    } catch {
+      // WebGL unavailable (hardware acceleration off, some VMs): skip the globe instead of crashing the page.
+      window.removeEventListener("resize", onResize);
+      return;
+    }
 
     setTimeout(() => {
       if (canvasRef.current) {

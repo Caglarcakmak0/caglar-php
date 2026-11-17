@@ -15,8 +15,8 @@ export default function BlogPage() {
       {/* Blog Grid */}
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post) => (
-            <BlogCard key={post.id} post={post} />
+          {blogPosts.map((post, i) => (
+            <BlogCard key={post.id} post={post} priority={i === 0} />
           ))}
         </div>
 

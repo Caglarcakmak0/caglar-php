@@ -7,7 +7,6 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
@@ -22,7 +21,7 @@ export function SiteNavbar() {
   const t = useTranslations();
 
   const navItems = [
-    { name: t("Nav.about"), link: "/about" },
+    { name: t("Nav.about"), link: "/#about" },
     { name: t("Nav.blog"), link: "/blog" },
     { name: t("Nav.projects"), link: "/#projects" },
     { name: t("Nav.experience"), link: "/#experience" },
@@ -59,12 +58,12 @@ export function SiteNavbar() {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300 cursor-pointer"
+                className="relative block w-full py-2.5 text-neutral-600 dark:text-neutral-300 cursor-pointer"
               >
                 <span className="block">{item.name}</span>
               </Link>
             ))}
-            <div className="flex w-full justify-center gap-4">
+            <div className="mt-2 flex w-full justify-center gap-4">
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
