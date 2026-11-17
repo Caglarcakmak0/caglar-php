@@ -22,7 +22,7 @@ const GlobeCard = ({
 
   const timezones = [
     { code: "GB", name: t("UK"), flag: "🇬🇧" },
-    { code: "IN", name: t("India"), flag: "🇮🇳" },
+    { code: "EU", name: t("Europe"), flag: "🇪🇺" },
     { code: "US", name: t("USA"), flag: "🇺🇸" },
   ];
 

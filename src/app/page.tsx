@@ -1,12 +1,6 @@
 // Static export has no server, so the root redirect is done in plain HTML
-// (meta refresh) plus a tiny script that picks the browser language.
-const redirectScript = `
-(function () {
-  var lang = (navigator.language || "en").toLowerCase();
-  var target = lang.indexOf("tr") === 0 ? "/tr/" : "/en/";
-  location.replace(target + location.hash);
-})();
-`;
+// (meta refresh) plus a tiny script. English is always the default.
+const redirectScript = `location.replace("/en/" + location.hash);`;
 
 /* eslint-disable @next/next/no-html-link-for-pages -- plain anchors in the static redirect page */
 export default function RootPage() {
