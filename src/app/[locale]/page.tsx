@@ -62,7 +62,6 @@ export default function Home() {
             text: t("Hero.badge"),
             action: t("Hero.badgeAction"),
           }}
-          credential={t("Hero.credential")}
           headline={{
             prefix: t("Hero.headlinePrefix"),
             words: t.raw("Hero.headlineWords") as string[],

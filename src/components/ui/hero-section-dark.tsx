@@ -4,7 +4,6 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Copy } from "lucide-react";
 import { ShootingStars } from "@/components/ui/shooting-stars";
-import { SiYcombinator } from "@icons-pack/react-simple-icons";
 import { HeroAvatar } from "@/components/ui/hero-avatar";
 import { RotatingWords } from "@/components/ui/rotating-words";
 
@@ -14,7 +13,6 @@ interface HeroSectionProps {
     text: string;
     action: string;
   };
-  credential?: string;
   headline?: {
     prefix: string;
     words: string[];
@@ -41,7 +39,6 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         text: "Upcoming",
         action: "Nextnode is launching soon!",
       },
-      credential,
       headline = {
         prefix: "I help founders turn ideas into seamless",
         words: ["digital experiences"],
@@ -123,14 +120,6 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               <ArrowRight className="w-4 h-4" />
             </span>
           </div>
-
-          {/* Credential */}
-          {credential && (
-            <p className="mb-6 flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-center text-xs sm:text-sm font-medium text-orange-700 dark:text-orange-200">
-              <SiYcombinator className="h-4 w-4 shrink-0" color="#F0652F" aria-hidden="true" />
-              {credential}
-            </p>
-          )}
 
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-center text-gray-800 dark:text-gray-100 leading-tight mb-8">

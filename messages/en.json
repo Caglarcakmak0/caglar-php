@@ -13,7 +13,6 @@
   "Hero": {
     "badge": "Available",
     "badgeAction": "Open to new opportunities!",
-    "credential": "Engineer from a YC startup · Referred by ex-FAANG engineers",
     "headlinePrefix": "Building the infrastructure behind",
     "headlineWords": [
       "AI agents",
